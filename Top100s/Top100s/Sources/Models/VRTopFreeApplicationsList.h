@@ -1,5 +1,5 @@
 //
-//  VRTopFreeApplications.h
+//  VRTopFreeApplicationsList.h
 //  Top100s
 //
 //  Created by Vlad-R on 10/21/14.
@@ -8,6 +8,6 @@
 
 #import "VRRequestObject.h"
 
-@interface VRTopFreeApplications : VRRequestObject
+@interface VRTopFreeApplicationsList : VRRequestObject
 
 @end

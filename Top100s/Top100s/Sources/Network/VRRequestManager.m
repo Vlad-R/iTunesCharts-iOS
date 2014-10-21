@@ -8,6 +8,13 @@
 
 #import "VRRequestManager.h"
 
+@interface VRRequestManager ()
+
+@property (nonatomic, strong) NSURLSession *session;
+@property (nonatomic, strong) NSOperationQueue *operationQueue;
+
+@end
+
 @implementation VRRequestManager
 
 + (instancetype)sharedManager {
@@ -19,6 +26,21 @@
 	});
 	
 	return sharedInstance;
+}
+
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.operationQueue = [[NSOperationQueue alloc] init];
+        self.operationQueue.qualityOfService = NSQualityOfServiceDefault;
+        self.operationQueue.maxConcurrentOperationCount = 1;
+        
+        NSURLSessionConfiguration *sessionConfig = [NSURLSessionConfiguration defaultSessionConfiguration];
+        self.session = [NSURLSession sessionWithConfiguration:sessionConfig
+                                                     delegate:nil
+                                                delegateQueue:self.operationQueue];
+    }
+    return self;
 }
 
 @end
