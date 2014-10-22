@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 Vlad-R. All rights reserved.
 //
 
-#import "VRRequestObject.h"
+#import "VRRequest.h"
 
-@interface VRTopFreeApplicationsList : VRRequestObject
+@interface VRTopFreeApplicationsList : VRRequest
 
 @end

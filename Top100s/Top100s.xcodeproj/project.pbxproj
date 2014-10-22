@@ -7,21 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1847B22A19F68287001104C2 /* VRRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1847B22919F68287001104C2 /* VRRequestManager.m */; };
-		1847B22E19F68970001104C2 /* VRRequestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1847B22D19F68970001104C2 /* VRRequestObject.m */; };
+		1847B22A19F68287001104C2 /* VRCommunicationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1847B22919F68287001104C2 /* VRCommunicationManager.m */; };
 		1847B23119F68EBF001104C2 /* VRTopFreeApplicationsList.m in Sources */ = {isa = PBXBuildFile; fileRef = 1847B23019F68EBF001104C2 /* VRTopFreeApplicationsList.m */; };
 		263BBC6619F3236E006C04D9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 263BBC5B19F3236E006C04D9 /* Images.xcassets */; };
 		263BBC6819F3236E006C04D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 263BBC5E19F3236E006C04D9 /* Main.storyboard */; };
 		263BBC6919F3236E006C04D9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 263BBC6119F3236E006C04D9 /* main.m */; };
 		263BBC6A19F3236E006C04D9 /* VRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 263BBC6319F3236E006C04D9 /* VRAppDelegate.m */; };
 		263BBC6B19F3236E006C04D9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 263BBC6519F3236E006C04D9 /* LaunchScreen.xib */; };
+		26DECF1619F84752003BB9A1 /* VRRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 26DECF1519F84752003BB9A1 /* VRRequest.m */; };
+		26DECF2319F84FEE003BB9A1 /* NSMutableString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 26DECF2219F84FEE003BB9A1 /* NSMutableString+Additions.m */; };
+		26DECF2619F855D4003BB9A1 /* VRRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 26DECF2519F855D4003BB9A1 /* VRRequestManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1847B22819F68287001104C2 /* VRRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRRequestManager.h; sourceTree = "<group>"; };
-		1847B22919F68287001104C2 /* VRRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRRequestManager.m; sourceTree = "<group>"; };
-		1847B22C19F68970001104C2 /* VRRequestObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRRequestObject.h; sourceTree = "<group>"; };
-		1847B22D19F68970001104C2 /* VRRequestObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRRequestObject.m; sourceTree = "<group>"; };
+		1847B22819F68287001104C2 /* VRCommunicationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRCommunicationManager.h; sourceTree = "<group>"; };
+		1847B22919F68287001104C2 /* VRCommunicationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRCommunicationManager.m; sourceTree = "<group>"; };
 		1847B22F19F68EBF001104C2 /* VRTopFreeApplicationsList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRTopFreeApplicationsList.h; sourceTree = "<group>"; };
 		1847B23019F68EBF001104C2 /* VRTopFreeApplicationsList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRTopFreeApplicationsList.m; sourceTree = "<group>"; };
 		263BBC3019F31F3D006C04D9 /* Top100s.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Top100s.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -32,6 +32,12 @@
 		263BBC6219F3236E006C04D9 /* VRAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRAppDelegate.h; sourceTree = "<group>"; };
 		263BBC6319F3236E006C04D9 /* VRAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRAppDelegate.m; sourceTree = "<group>"; };
 		263BBC6519F3236E006C04D9 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		26DECF1419F84752003BB9A1 /* VRRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRRequest.h; sourceTree = "<group>"; };
+		26DECF1519F84752003BB9A1 /* VRRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRRequest.m; sourceTree = "<group>"; };
+		26DECF2119F84FEE003BB9A1 /* NSMutableString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableString+Additions.h"; sourceTree = "<group>"; };
+		26DECF2219F84FEE003BB9A1 /* NSMutableString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableString+Additions.m"; sourceTree = "<group>"; };
+		26DECF2419F855D4003BB9A1 /* VRRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRRequestManager.h; sourceTree = "<group>"; };
+		26DECF2519F855D4003BB9A1 /* VRRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRRequestManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,8 +54,11 @@
 		1847B22719F6821E001104C2 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				1847B22819F68287001104C2 /* VRRequestManager.h */,
-				1847B22919F68287001104C2 /* VRRequestManager.m */,
+				1847B22819F68287001104C2 /* VRCommunicationManager.h */,
+				1847B22919F68287001104C2 /* VRCommunicationManager.m */,
+				26DECF2419F855D4003BB9A1 /* VRRequestManager.h */,
+				26DECF2519F855D4003BB9A1 /* VRRequestManager.m */,
+				26DECF1319F84752003BB9A1 /* Requests */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -57,8 +66,6 @@
 		1847B22B19F68923001104C2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				1847B22C19F68970001104C2 /* VRRequestObject.h */,
-				1847B22D19F68970001104C2 /* VRRequestObject.m */,
 				1847B22F19F68EBF001104C2 /* VRTopFreeApplicationsList.h */,
 				1847B23019F68EBF001104C2 /* VRTopFreeApplicationsList.m */,
 			);
@@ -114,6 +121,7 @@
 				263BBC6019F3236E006C04D9 /* Application */,
 				1847B22719F6821E001104C2 /* Network */,
 				1847B22B19F68923001104C2 /* Models */,
+				26DECF1719F848A5003BB9A1 /* Utils */,
 				263BBC6419F3236E006C04D9 /* User Interface */,
 			);
 			path = Sources;
@@ -135,6 +143,24 @@
 				263BBC6519F3236E006C04D9 /* LaunchScreen.xib */,
 			);
 			path = "User Interface";
+			sourceTree = "<group>";
+		};
+		26DECF1319F84752003BB9A1 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				26DECF1419F84752003BB9A1 /* VRRequest.h */,
+				26DECF1519F84752003BB9A1 /* VRRequest.m */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		26DECF1719F848A5003BB9A1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				26DECF2119F84FEE003BB9A1 /* NSMutableString+Additions.h */,
+				26DECF2219F84FEE003BB9A1 /* NSMutableString+Additions.m */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,9 +233,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1847B22E19F68970001104C2 /* VRRequestObject.m in Sources */,
 				1847B23119F68EBF001104C2 /* VRTopFreeApplicationsList.m in Sources */,
-				1847B22A19F68287001104C2 /* VRRequestManager.m in Sources */,
+				26DECF2319F84FEE003BB9A1 /* NSMutableString+Additions.m in Sources */,
+				1847B22A19F68287001104C2 /* VRCommunicationManager.m in Sources */,
+				26DECF1619F84752003BB9A1 /* VRRequest.m in Sources */,
+				26DECF2619F855D4003BB9A1 /* VRRequestManager.m in Sources */,
 				263BBC6A19F3236E006C04D9 /* VRAppDelegate.m in Sources */,
 				263BBC6919F3236E006C04D9 /* main.m in Sources */,
 			);

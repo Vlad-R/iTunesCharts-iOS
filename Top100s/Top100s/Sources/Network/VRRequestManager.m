@@ -2,45 +2,56 @@
 //  VRRequestManager.m
 //  Top100s
 //
-//  Created by Vlad-R on 10/21/14.
+//  Created by Vlad-R on 23/10/14.
 //  Copyright (c) 2014 Vlad-R. All rights reserved.
 //
 
 #import "VRRequestManager.h"
 
-@interface VRRequestManager ()
-
-@property (nonatomic, strong) NSURLSession *session;
-@property (nonatomic, strong) NSOperationQueue *operationQueue;
-
-@end
+#import "NSMutableString+Additions.h"
+#import "VRRequest.h"
 
 @implementation VRRequestManager
 
-+ (instancetype)sharedManager {
-	static VRRequestManager *sharedInstance = nil;
-	
-	static dispatch_once_t onceToken;
-	dispatch_once(&onceToken, ^{
-		sharedInstance = [[self alloc] init];
-	});
-	
-	return sharedInstance;
+#pragma mark - Public
+
++ (NSURLRequest *)URLRequest:(VRRequest *)request {
+    NSMutableURLRequest *urlRequest = [[NSMutableURLRequest alloc] init];
+    
+    NSString *url = [NSString stringWithFormat:@"%@%@", request.host, request.endpoint];
+    NSString *parameters = [self parametersForRequest:request];
+    
+    switch (request.type) {
+        case VRRequestTypeGET: {
+            url = [url stringByAppendingFormat:@"/%@/json", parameters];
+            
+            break;
+        }
+        case VRRequestTypePOST: {
+            // no need for this at the moment
+            break;
+        }
+            
+        default: {
+            break;
+        }
+    }
+    
+    urlRequest.URL = [NSURL URLWithString:url];
+    
+    return urlRequest;
 }
 
-- (instancetype)init {
-    self = [super init];
-    if (self) {
-        self.operationQueue = [[NSOperationQueue alloc] init];
-        self.operationQueue.qualityOfService = NSQualityOfServiceDefault;
-        self.operationQueue.maxConcurrentOperationCount = 1;
-        
-        NSURLSessionConfiguration *sessionConfig = [NSURLSessionConfiguration defaultSessionConfiguration];
-        self.session = [NSURLSession sessionWithConfiguration:sessionConfig
-                                                     delegate:nil
-                                                delegateQueue:self.operationQueue];
+#pragma mark - Private
+
++ (NSString *)parametersForRequest:(VRRequest *)request {
+    NSMutableString *result = [NSMutableString string];
+    NSDictionary *parameterMap = request.parameterMap;
+    for (NSString *key in parameterMap.allKeys) {
+        [result addParameter:parameterMap[key] forKey:key];
     }
-    return self;
+    
+    return result;
 }
 
 @end

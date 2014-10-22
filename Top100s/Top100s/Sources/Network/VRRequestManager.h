@@ -2,14 +2,16 @@
 //  VRRequestManager.h
 //  Top100s
 //
-//  Created by Vlad-R on 10/21/14.
+//  Created by Vlad-R on 23/10/14.
 //  Copyright (c) 2014 Vlad-R. All rights reserved.
 //
 
 @import Foundation;
 
+@class VRRequest;
+
 @interface VRRequestManager : NSObject
 
-+ (instancetype)sharedManager;
++ (NSURLRequest *)URLRequest:(VRRequest *)request;
 
 @end
