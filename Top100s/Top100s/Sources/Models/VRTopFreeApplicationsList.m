@@ -14,4 +14,9 @@
 	return @"/topfreeapplications";
 }
 
+- (NSDictionary *)parameterMap {
+	return @{ @"limit" : self.limit,
+			  @"genre" : @"6015" };
+}
+
 @end

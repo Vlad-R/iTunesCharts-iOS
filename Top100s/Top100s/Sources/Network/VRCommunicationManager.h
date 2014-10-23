@@ -12,4 +12,6 @@
 
 + (instancetype)sharedManager;
 
+- (NSURLSessionDataTask *)freeMobileAppsWithLimit:(NSUInteger)limit completion:(void(^)(id response, NSError *error))block;
+
 @end

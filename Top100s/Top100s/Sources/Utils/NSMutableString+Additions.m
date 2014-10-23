@@ -11,7 +11,7 @@
 @implementation NSMutableString (Additions)
 
 - (void)addParameter:(NSString *)parameter forKey:(NSString *)key {
-    [self appendFormat:@"%@=%@", key, parameter];
+    [self appendFormat:@"/%@=%@", key, parameter];
 }
 
 @end

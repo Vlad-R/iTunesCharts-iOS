@@ -23,7 +23,7 @@
     
     switch (request.type) {
         case VRRequestTypeGET: {
-            url = [url stringByAppendingFormat:@"/%@/json", parameters];
+            url = [url stringByAppendingFormat:@"%@/json", parameters];
             
             break;
         }

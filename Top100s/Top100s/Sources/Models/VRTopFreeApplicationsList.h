@@ -10,4 +10,6 @@
 
 @interface VRTopFreeApplicationsList : VRRequest
 
+@property (nonatomic, copy) NSString *limit;
+
 @end
