@@ -16,12 +16,23 @@
     return [NSString stringWithFormat:@"https://itunes.apple.com/%@/rss", [self countryCode]];
 }
 
+- (VRRequestType)type {
+	return VRRequestTypeGET;
+}
+
 - (NSString *)endpoint {
+	ASSERT_MISSING_OVERRIDE_IMPLEMENTATION;
 	return nil;
 }
 
 - (NSDictionary *)parameterMap {
+	ASSERT_MISSING_OVERRIDE_IMPLEMENTATION;
     return nil;
+}
+
+- (Class)responseModelClass {
+	ASSERT_MISSING_OVERRIDE_IMPLEMENTATION;
+	return NULL;
 }
 
 #pragma mark - Private

@@ -15,11 +15,12 @@ typedef enum {
 
 @interface VRRequest : NSObject
 
-@property (nonatomic, readonly) NSString *host;
+- (NSString *)host;
 
 //Override in subclasses
-@property (nonatomic, readonly) VRRequestType type;
-@property (nonatomic, readonly) NSString *endpoint;
-@property (nonatomic, readonly) NSDictionary *parameterMap;
+- (VRRequestType)type;
+- (NSString *)endpoint;
+- (NSDictionary *)parameterMap;
+- (Class)responseModelClass;
 
 @end

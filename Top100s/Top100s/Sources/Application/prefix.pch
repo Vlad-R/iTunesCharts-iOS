@@ -1,0 +1,20 @@
+//
+//  prefix.pch
+//  Top100s
+//
+//  Created by Vlad-R on 10/24/14.
+//  Copyright (c) 2014 Vlad-R. All rights reserved.
+//
+
+#ifndef Top100s_prefix_pch
+#define Top100s_prefix_pch
+
+
+#ifdef __OBJC__
+
+	#define ASSERT_MISSING_OVERRIDE_IMPLEMENTATION NSAssert(NO, @"Need to override implementation in %s at line %d", __FILE__, __LINE__)
+
+#endif
+
+
+#endif
