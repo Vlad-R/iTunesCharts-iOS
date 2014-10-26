@@ -8,8 +8,13 @@
 
 @import Foundation;
 
-@interface VRModel : NSObject
+@protocol VRModel <NSObject>
 
-+ (NSDictionary *)responseMap;
+@required
+- (NSDictionary *)responseMap;
+
+@optional
+- (NSString *)jsonInitializationKey;
+- (NSDictionary *)transformablePropertyMap;
 
 @end

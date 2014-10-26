@@ -30,7 +30,7 @@
     return nil;
 }
 
-- (Class)responseModelClass {
+- (Class<VRModel>)responseModelClass {
 	ASSERT_MISSING_OVERRIDE_IMPLEMENTATION;
 	return NULL;
 }

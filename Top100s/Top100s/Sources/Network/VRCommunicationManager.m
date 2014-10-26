@@ -9,9 +9,9 @@
 #import "VRCommunicationManager.h"
 
 #import "VRDataParser.h"
+#import "VRFreeMobileApps.h"
 #import "VRRequest.h"
 #import "VRRequestManager.h"
-#import "VRTopFreeApplicationsList.h"
 
 @interface VRCommunicationManager ()
 
@@ -50,16 +50,16 @@
 
 #pragma mark - Public
 
-- (NSURLSessionDataTask *)freeMobileAppsWithLimit:(NSUInteger)limit completion:(void(^)(id response, NSError *error))block {
-	VRTopFreeApplicationsList *list = [[VRTopFreeApplicationsList alloc] init];
-	list.limit = [NSString stringWithFormat:@"%lu", limit];
+- (NSURLSessionDataTask *)freeMobileAppsWithLimit:(NSUInteger)limit completion:(void(^)(VRFreeMobileApps *model, NSError *error))block {
+	VRFreeMobileAppsRequest *req = [[VRFreeMobileAppsRequest alloc] init];
+	req.limit = [NSString stringWithFormat:@"%lu", limit];
 	
-	return [self dataTaskWithRequest:list completion:block];
+	return [self dataTaskWithRequest:req completion:block];
 }
 
 #pragma mark - Private
 
-- (NSURLSessionDataTask *)dataTaskWithRequest:(VRRequest *)request completion:(void(^)(id response, NSError *error))block {
+- (NSURLSessionDataTask *)dataTaskWithRequest:(VRRequest *)request completion:(void(^)(id<VRModel> response, NSError *error))block {
 	if (!block) {
 		return nil;
 	}
@@ -71,7 +71,8 @@
 														 //TODO: Proper Error Handling
 														 block(nil, error);
 													 } else {
-														 block([VRDataParser objectFromJSONData:data], error);
+                                                         id<VRModel> model = [VRDataParser parseResponseData:data forRequest:request];
+														 block(model, error);
 													 }
 												 }];
 	[task resume];

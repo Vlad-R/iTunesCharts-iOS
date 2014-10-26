@@ -18,13 +18,12 @@
 + (NSURLRequest *)URLRequest:(VRRequest *)request {
     NSMutableURLRequest *urlRequest = [[NSMutableURLRequest alloc] init];
     
-    NSString *url = [NSString stringWithFormat:@"%@%@", request.host, request.endpoint];
+    NSString *url = [NSString stringWithFormat:@"%@%@", [request host], [request endpoint]];
     NSString *parameters = [self parametersForRequest:request];
     
-    switch (request.type) {
+    switch ([request type]) {
         case VRRequestTypeGET: {
             url = [url stringByAppendingFormat:@"%@/json", parameters];
-            
             break;
         }
         case VRRequestTypePOST: {
@@ -46,9 +45,10 @@
 
 + (NSString *)parametersForRequest:(VRRequest *)request {
     NSMutableString *result = [NSMutableString string];
-    NSDictionary *parameterMap = request.parameterMap;
+    NSDictionary *parameterMap = [request parameterMap];
     for (NSString *key in parameterMap.allKeys) {
-        [result addParameter:parameterMap[key] forKey:key];
+        NSString *value = [request valueForKey:parameterMap[key]];
+        [result addParameter:value forKey:key];
     }
     
     return result;

@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Vlad-R. All rights reserved.
 //
 
-@import Foundation;
+#import "VRModel.h"
 
 typedef enum {
 	VRRequestTypeGET = 0,
@@ -21,6 +21,6 @@ typedef enum {
 - (VRRequestType)type;
 - (NSString *)endpoint;
 - (NSDictionary *)parameterMap;
-- (Class)responseModelClass;
+- (Class<VRModel>)responseModelClass;
 
 @end

@@ -7,12 +7,3 @@
 //
 
 #import "VRModel.h"
-
-@implementation VRModel
-
-+ (NSDictionary *)responseMap {
-	ASSERT_MISSING_OVERRIDE_IMPLEMENTATION;
-	return nil;
-}
-
-@end
