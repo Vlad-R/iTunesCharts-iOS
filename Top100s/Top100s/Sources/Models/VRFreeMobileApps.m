@@ -18,11 +18,12 @@
 }
 
 - (NSDictionary *)responseMap {
-    return @{ pmap(@"entry", values) };
+	return @{ pmap((@[ @"author", @"name", @"label" ]), author),
+			  pmap(@[ @"entry" ], entries) };
 }
 
 - (NSDictionary *)transformablePropertyMap {
-    return @{ transform(values, VREntry) };
+    return @{ transform(entries, VREntry) };
 }
 
 @end
@@ -35,7 +36,7 @@
 }
 
 - (NSDictionary *)parameterMap {
-    return @{ pmap(@"limit", limit) };
+    return @{ pmap(@[ @"limit" ], limit) };
 }
 
 - (Class)responseModelClass {

@@ -12,15 +12,10 @@
 
 #ifdef __OBJC__
 
-    #define FILE_NAME__ [[NSString stringWithFormat:@"%s", __FILE__] lastPathComponent]
 
-	#define ASSERT_MISSING_OVERRIDE_IMPLEMENTATION NSAssert(NO, @"Need to override implementation in %@ at line %d", FILE_NAME__, __LINE__)
+#import "VRFunctions.h"
+#import "VRMacros.h"
 
-    #define PROPERTY(property) NSStringFromSelector(@selector(property))
-    #define CLASS(c) NSStringFromClass([c class])
-
-    #define pmap(key, property) key:PROPERTY(property)
-    #define transform(property, cls) PROPERTY(property):CLASS(cls)
 
 #endif
 

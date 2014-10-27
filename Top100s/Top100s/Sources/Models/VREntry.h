@@ -10,6 +10,6 @@
 
 @interface VREntry : NSObject <VRModel>
 
-@property (nonatomic, copy) id name;
+@property (nonatomic, copy) NSString *name;
 
 @end

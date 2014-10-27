@@ -11,7 +11,7 @@
 @implementation VREntry
 
 - (NSDictionary *)responseMap {
-    return @{ pmap(@"im:name", name) };
+	return @{ pmap((@[ @"im:name", @"label" ]), name) };
 }
 
 @end

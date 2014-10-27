@@ -8,10 +8,10 @@
 
 #import "VRModel.h"
 
-typedef enum {
+typedef NS_ENUM(NSInteger, VRRequestType) {
 	VRRequestTypeGET = 0,
 	VRRequestTypePOST
-} VRRequestType;
+};
 
 @interface VRRequest : NSObject
 

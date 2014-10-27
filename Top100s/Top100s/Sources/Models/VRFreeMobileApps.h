@@ -12,7 +12,8 @@
 
 @interface VRFreeMobileApps : NSObject <VRModel>
 
-@property (nonatomic, copy) NSArray *values;
+@property (nonatomic, copy) NSString *author;
+@property (nonatomic, copy) NSArray *entries;
 
 @end
 

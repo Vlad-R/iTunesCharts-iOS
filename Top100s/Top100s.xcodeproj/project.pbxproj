@@ -25,6 +25,8 @@
 /* Begin PBXFileReference section */
 		1847B22819F68287001104C2 /* VRCommunicationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRCommunicationManager.h; sourceTree = "<group>"; };
 		1847B22919F68287001104C2 /* VRCommunicationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRCommunicationManager.m; sourceTree = "<group>"; };
+		184EAAEC19FE56490084FC05 /* VRMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRMacros.h; sourceTree = "<group>"; };
+		184EAAED19FE669D0084FC05 /* VRFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRFunctions.h; sourceTree = "<group>"; };
 		1883C65F19F9215C004AA032 /* VRRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRRequest.h; sourceTree = "<group>"; };
 		1883C66019F9215C004AA032 /* VRRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRRequest.m; sourceTree = "<group>"; };
 		1883C66319F92FA1004AA032 /* VRDataParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRDataParser.h; sourceTree = "<group>"; };
@@ -174,6 +176,8 @@
 		26DECF1719F848A5003BB9A1 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				184EAAEC19FE56490084FC05 /* VRMacros.h */,
+				184EAAED19FE669D0084FC05 /* VRFunctions.h */,
 				26DECF2119F84FEE003BB9A1 /* NSMutableString+Additions.h */,
 				26DECF2219F84FEE003BB9A1 /* NSMutableString+Additions.m */,
 			);
