@@ -13,8 +13,8 @@
 #ifdef __OBJC__
 
 
-#import "VRFunctions.h"
-#import "VRMacros.h"
+#include "VRFunctions.h"
+#include "VRMacros.h"
 
 
 #endif

@@ -6,6 +6,10 @@
 //  Copyright (c) 2014 Vlad-R. All rights reserved.
 //
 
+#ifndef VRFunctions_Header
+#define VRFunctions_Header
+
+
 @import Foundation;
 
 static inline NSString *JSON_KEYPATH(NSArray *keys) {
@@ -24,3 +28,6 @@ static inline NSString *JSON_KEYPATH(NSArray *keys) {
 static inline NSArray *JSON_KEYS(NSString *string) {
 	return [string componentsSeparatedByString:@"->"];
 }
+
+
+#endif
