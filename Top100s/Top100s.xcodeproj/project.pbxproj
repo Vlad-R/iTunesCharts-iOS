@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1847B22A19F68287001104C2 /* VRCommunicationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1847B22919F68287001104C2 /* VRCommunicationManager.m */; };
+		184D9C4719FFA19F00BA0462 /* VRIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 184D9C4619FFA19F00BA0462 /* VRIcon.m */; };
+		184D9C4A19FFA45E00BA0462 /* VRPrice.m in Sources */ = {isa = PBXBuildFile; fileRef = 184D9C4919FFA45E00BA0462 /* VRPrice.m */; };
 		1883C66119F9215C004AA032 /* VRRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1883C66019F9215C004AA032 /* VRRequest.m */; };
 		1883C66519F92FA1004AA032 /* VRDataParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1883C66419F92FA1004AA032 /* VRDataParser.m */; };
 		18E198CB19FA880B00DEF9A4 /* VRModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E198CA19FA880B00DEF9A4 /* VRModel.m */; };
@@ -25,6 +27,10 @@
 /* Begin PBXFileReference section */
 		1847B22819F68287001104C2 /* VRCommunicationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRCommunicationManager.h; sourceTree = "<group>"; };
 		1847B22919F68287001104C2 /* VRCommunicationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRCommunicationManager.m; sourceTree = "<group>"; };
+		184D9C4519FFA19F00BA0462 /* VRIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRIcon.h; sourceTree = "<group>"; };
+		184D9C4619FFA19F00BA0462 /* VRIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRIcon.m; sourceTree = "<group>"; };
+		184D9C4819FFA45E00BA0462 /* VRPrice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRPrice.h; sourceTree = "<group>"; };
+		184D9C4919FFA45E00BA0462 /* VRPrice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRPrice.m; sourceTree = "<group>"; };
 		184EAAEC19FE56490084FC05 /* VRMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRMacros.h; sourceTree = "<group>"; };
 		184EAAED19FE669D0084FC05 /* VRFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRFunctions.h; sourceTree = "<group>"; };
 		1883C65F19F9215C004AA032 /* VRRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRRequest.h; sourceTree = "<group>"; };
@@ -85,6 +91,10 @@
 				2624746519FC2B2700D78124 /* VRFreeMobileApps.m */,
 				2624746A19FC5E1700D78124 /* VREntry.h */,
 				2624746B19FC5E1700D78124 /* VREntry.m */,
+				184D9C4519FFA19F00BA0462 /* VRIcon.h */,
+				184D9C4619FFA19F00BA0462 /* VRIcon.m */,
+				184D9C4819FFA45E00BA0462 /* VRPrice.h */,
+				184D9C4919FFA45E00BA0462 /* VRPrice.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -260,10 +270,12 @@
 				26DECF2319F84FEE003BB9A1 /* NSMutableString+Additions.m in Sources */,
 				2624746C19FC5E1700D78124 /* VREntry.m in Sources */,
 				2624746619FC2B2700D78124 /* VRFreeMobileApps.m in Sources */,
+				184D9C4719FFA19F00BA0462 /* VRIcon.m in Sources */,
 				1847B22A19F68287001104C2 /* VRCommunicationManager.m in Sources */,
 				26DECF2619F855D4003BB9A1 /* VRRequestManager.m in Sources */,
 				263BBC6A19F3236E006C04D9 /* VRAppDelegate.m in Sources */,
 				263BBC6919F3236E006C04D9 /* main.m in Sources */,
+				184D9C4A19FFA45E00BA0462 /* VRPrice.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,10 +8,24 @@
 
 #import "VREntry.h"
 
+#import "VRIcon.h"
+#import "VRPrice.h"
+
 @implementation VREntry
 
 - (NSDictionary *)responseMap {
-	return @{ pmap((@[ @"im:name", @"label" ]), name) };
+	return @{ pmap((@[ @"im:name", @"label" ]), name),
+			  pmap((@[ @"title", @"label" ]), title),
+			  pmap((@[ @"im:image" ]), icons),
+			  pmap((@[ @"summary", @"label" ]), summary),
+			  pmap((@[ @"im:price" ]), price),
+			  pmap((@[ @"link", @"attributes", @"href" ]), link),
+			  pmap((@[ @"im:releaseDate", @"attributes", @"label" ]), releaseDate) };
+}
+
+- (NSDictionary *)transformablePropertyMap {
+	return @{ transform(icons, VRIcon),
+			  transform(price, VRPrice) };
 }
 
 @end
