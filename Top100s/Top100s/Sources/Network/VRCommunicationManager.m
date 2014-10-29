@@ -8,8 +8,8 @@
 
 #import "VRCommunicationManager.h"
 
+#import "VRApps.h"
 #import "VRDataParser.h"
-#import "VRFreeMobileApps.h"
 #import "VRRequest.h"
 #import "VRRequestManager.h"
 
@@ -50,8 +50,15 @@
 
 #pragma mark - Public
 
-- (NSURLSessionDataTask *)freeMobileAppsWithLimit:(NSUInteger)limit completion:(void(^)(VRFreeMobileApps *model, NSError *error))block {
+- (NSURLSessionDataTask *)freeMobileAppsWithLimit:(NSUInteger)limit completion:(void(^)(VRApps *, NSError *))block {
 	VRFreeMobileAppsRequest *req = [[VRFreeMobileAppsRequest alloc] init];
+	req.limit = [NSString stringWithFormat:@"%lu", limit];
+	
+	return [self dataTaskWithRequest:req completion:block];
+}
+
+- (NSURLSessionDataTask *)paidMobileAppsWithLimit:(NSUInteger)limit completion:(void (^)(VRApps *, NSError *))block {
+	VRPaidMobileAppsRequest *req = [[VRPaidMobileAppsRequest alloc] init];
 	req.limit = [NSString stringWithFormat:@"%lu", limit];
 	
 	return [self dataTaskWithRequest:req completion:block];

@@ -1,8 +1,8 @@
 //
-//  VRFreeMobileApps.h
+//  VRList.h
 //  Top100s
 //
-//  Created by Vlad-R on 25/10/14.
+//  Created by Vlad-R on 10/29/14.
 //  Copyright (c) 2014 Vlad-R. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 #import "VRRequest.h"
 
 
-@interface VRFreeMobileApps : NSObject <VRModel>
+@interface VRList : NSObject <VRModel>
 
 @property (nonatomic, copy) NSString *author;
 @property (nonatomic, copy) NSArray *entries;
@@ -18,7 +18,7 @@
 @end
 
 
-@interface VRFreeMobileAppsRequest : VRRequest
+@interface VRListRequest : VRRequest
 
 @property (nonatomic, copy) NSString *limit;
 

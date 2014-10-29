@@ -8,12 +8,13 @@
 
 @import Foundation;
 
-@class VRFreeMobileApps;
+@class VRApps;
 
 @interface VRCommunicationManager : NSObject
 
 + (instancetype)sharedManager;
 
-- (NSURLSessionDataTask *)freeMobileAppsWithLimit:(NSUInteger)limit completion:(void(^)(VRFreeMobileApps *model, NSError *error))block;
+- (NSURLSessionDataTask *)freeMobileAppsWithLimit:(NSUInteger)limit completion:(void(^)(VRApps *model, NSError *error))block;
+- (NSURLSessionDataTask *)paidMobileAppsWithLimit:(NSUInteger)limit completion:(void(^)(VRApps *model, NSError *error))block;
 
 @end

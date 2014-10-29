@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		180648081A010AA400C1AE59 /* VRList.m in Sources */ = {isa = PBXBuildFile; fileRef = 180648071A010AA400C1AE59 /* VRList.m */; };
+		1806480E1A0113A900C1AE59 /* VRApps.m in Sources */ = {isa = PBXBuildFile; fileRef = 1806480D1A0113A900C1AE59 /* VRApps.m */; };
 		1847B22A19F68287001104C2 /* VRCommunicationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1847B22919F68287001104C2 /* VRCommunicationManager.m */; };
 		184D9C4719FFA19F00BA0462 /* VRIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 184D9C4619FFA19F00BA0462 /* VRIcon.m */; };
 		184D9C4A19FFA45E00BA0462 /* VRPrice.m in Sources */ = {isa = PBXBuildFile; fileRef = 184D9C4919FFA45E00BA0462 /* VRPrice.m */; };
 		1883C66119F9215C004AA032 /* VRRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1883C66019F9215C004AA032 /* VRRequest.m */; };
 		1883C66519F92FA1004AA032 /* VRDataParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1883C66419F92FA1004AA032 /* VRDataParser.m */; };
 		18E198CB19FA880B00DEF9A4 /* VRModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E198CA19FA880B00DEF9A4 /* VRModel.m */; };
-		2624746619FC2B2700D78124 /* VRFreeMobileApps.m in Sources */ = {isa = PBXBuildFile; fileRef = 2624746519FC2B2700D78124 /* VRFreeMobileApps.m */; };
 		2624746C19FC5E1700D78124 /* VREntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 2624746B19FC5E1700D78124 /* VREntry.m */; };
 		263BBC6619F3236E006C04D9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 263BBC5B19F3236E006C04D9 /* Images.xcassets */; };
 		263BBC6819F3236E006C04D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 263BBC5E19F3236E006C04D9 /* Main.storyboard */; };
@@ -25,6 +26,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		180648061A010AA400C1AE59 /* VRList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRList.h; sourceTree = "<group>"; };
+		180648071A010AA400C1AE59 /* VRList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRList.m; sourceTree = "<group>"; };
+		1806480C1A0113A900C1AE59 /* VRApps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRApps.h; sourceTree = "<group>"; };
+		1806480D1A0113A900C1AE59 /* VRApps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRApps.m; sourceTree = "<group>"; };
 		1847B22819F68287001104C2 /* VRCommunicationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRCommunicationManager.h; sourceTree = "<group>"; };
 		1847B22919F68287001104C2 /* VRCommunicationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRCommunicationManager.m; sourceTree = "<group>"; };
 		184D9C4519FFA19F00BA0462 /* VRIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRIcon.h; sourceTree = "<group>"; };
@@ -40,8 +45,6 @@
 		18E198C919FA880B00DEF9A4 /* VRModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRModel.h; sourceTree = "<group>"; };
 		18E198CA19FA880B00DEF9A4 /* VRModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRModel.m; sourceTree = "<group>"; };
 		18E198D019FA8DC800DEF9A4 /* prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = prefix.pch; sourceTree = "<group>"; };
-		2624746419FC2B2700D78124 /* VRFreeMobileApps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRFreeMobileApps.h; sourceTree = "<group>"; };
-		2624746519FC2B2700D78124 /* VRFreeMobileApps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRFreeMobileApps.m; sourceTree = "<group>"; };
 		2624746A19FC5E1700D78124 /* VREntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VREntry.h; sourceTree = "<group>"; };
 		2624746B19FC5E1700D78124 /* VREntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VREntry.m; sourceTree = "<group>"; };
 		263BBC3019F31F3D006C04D9 /* Top100s.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Top100s.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,8 +90,10 @@
 			children = (
 				18E198C919FA880B00DEF9A4 /* VRModel.h */,
 				18E198CA19FA880B00DEF9A4 /* VRModel.m */,
-				2624746419FC2B2700D78124 /* VRFreeMobileApps.h */,
-				2624746519FC2B2700D78124 /* VRFreeMobileApps.m */,
+				180648061A010AA400C1AE59 /* VRList.h */,
+				180648071A010AA400C1AE59 /* VRList.m */,
+				1806480C1A0113A900C1AE59 /* VRApps.h */,
+				1806480D1A0113A900C1AE59 /* VRApps.m */,
 				2624746A19FC5E1700D78124 /* VREntry.h */,
 				2624746B19FC5E1700D78124 /* VREntry.m */,
 				184D9C4519FFA19F00BA0462 /* VRIcon.h */,
@@ -265,11 +270,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1883C66519F92FA1004AA032 /* VRDataParser.m in Sources */,
+				180648081A010AA400C1AE59 /* VRList.m in Sources */,
 				18E198CB19FA880B00DEF9A4 /* VRModel.m in Sources */,
 				1883C66119F9215C004AA032 /* VRRequest.m in Sources */,
 				26DECF2319F84FEE003BB9A1 /* NSMutableString+Additions.m in Sources */,
 				2624746C19FC5E1700D78124 /* VREntry.m in Sources */,
-				2624746619FC2B2700D78124 /* VRFreeMobileApps.m in Sources */,
+				1806480E1A0113A900C1AE59 /* VRApps.m in Sources */,
 				184D9C4719FFA19F00BA0462 /* VRIcon.m in Sources */,
 				1847B22A19F68287001104C2 /* VRCommunicationManager.m in Sources */,
 				26DECF2619F855D4003BB9A1 /* VRRequestManager.m in Sources */,
