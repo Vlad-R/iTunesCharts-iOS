@@ -14,6 +14,9 @@
 		184D9C4A19FFA45E00BA0462 /* VRPrice.m in Sources */ = {isa = PBXBuildFile; fileRef = 184D9C4919FFA45E00BA0462 /* VRPrice.m */; };
 		1883C66119F9215C004AA032 /* VRRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1883C66019F9215C004AA032 /* VRRequest.m */; };
 		1883C66519F92FA1004AA032 /* VRDataParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1883C66419F92FA1004AA032 /* VRDataParser.m */; };
+		189F4F751A022E74009BEEE4 /* VRHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189F4F741A022E74009BEEE4 /* VRHomeViewController.m */; };
+		189F4F7F1A024D94009BEEE4 /* VRHomeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 189F4F7E1A024D94009BEEE4 /* VRHomeViewModel.m */; };
+		189F4F821A024EDD009BEEE4 /* VRHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 189F4F811A024EDD009BEEE4 /* VRHomeTableViewCell.m */; };
 		18E198CB19FA880B00DEF9A4 /* VRModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E198CA19FA880B00DEF9A4 /* VRModel.m */; };
 		2624746C19FC5E1700D78124 /* VREntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 2624746B19FC5E1700D78124 /* VREntry.m */; };
 		263BBC6619F3236E006C04D9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 263BBC5B19F3236E006C04D9 /* Images.xcassets */; };
@@ -42,6 +45,12 @@
 		1883C66019F9215C004AA032 /* VRRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRRequest.m; sourceTree = "<group>"; };
 		1883C66319F92FA1004AA032 /* VRDataParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRDataParser.h; sourceTree = "<group>"; };
 		1883C66419F92FA1004AA032 /* VRDataParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRDataParser.m; sourceTree = "<group>"; };
+		189F4F731A022E74009BEEE4 /* VRHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRHomeViewController.h; sourceTree = "<group>"; };
+		189F4F741A022E74009BEEE4 /* VRHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRHomeViewController.m; sourceTree = "<group>"; };
+		189F4F7D1A024D94009BEEE4 /* VRHomeViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRHomeViewModel.h; sourceTree = "<group>"; };
+		189F4F7E1A024D94009BEEE4 /* VRHomeViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRHomeViewModel.m; sourceTree = "<group>"; };
+		189F4F801A024EDD009BEEE4 /* VRHomeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRHomeTableViewCell.h; sourceTree = "<group>"; };
+		189F4F811A024EDD009BEEE4 /* VRHomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRHomeTableViewCell.m; sourceTree = "<group>"; };
 		18E198C919FA880B00DEF9A4 /* VRModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRModel.h; sourceTree = "<group>"; };
 		18E198CA19FA880B00DEF9A4 /* VRModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRModel.m; sourceTree = "<group>"; };
 		18E198D019FA8DC800DEF9A4 /* prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = prefix.pch; sourceTree = "<group>"; };
@@ -111,6 +120,19 @@
 				1883C66419F92FA1004AA032 /* VRDataParser.m */,
 			);
 			path = "Data Handling";
+			sourceTree = "<group>";
+		};
+		189F4F721A022E4A009BEEE4 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				189F4F731A022E74009BEEE4 /* VRHomeViewController.h */,
+				189F4F741A022E74009BEEE4 /* VRHomeViewController.m */,
+				189F4F7D1A024D94009BEEE4 /* VRHomeViewModel.h */,
+				189F4F7E1A024D94009BEEE4 /* VRHomeViewModel.m */,
+				189F4F801A024EDD009BEEE4 /* VRHomeTableViewCell.h */,
+				189F4F811A024EDD009BEEE4 /* VRHomeTableViewCell.m */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		263BBC2719F31F3D006C04D9 = {
@@ -183,6 +205,7 @@
 		263BBC6419F3236E006C04D9 /* User Interface */ = {
 			isa = PBXGroup;
 			children = (
+				189F4F721A022E4A009BEEE4 /* Home */,
 				263BBC6519F3236E006C04D9 /* LaunchScreen.xib */,
 			);
 			path = "User Interface";
@@ -272,14 +295,17 @@
 				1883C66519F92FA1004AA032 /* VRDataParser.m in Sources */,
 				180648081A010AA400C1AE59 /* VRList.m in Sources */,
 				18E198CB19FA880B00DEF9A4 /* VRModel.m in Sources */,
+				189F4F821A024EDD009BEEE4 /* VRHomeTableViewCell.m in Sources */,
 				1883C66119F9215C004AA032 /* VRRequest.m in Sources */,
 				26DECF2319F84FEE003BB9A1 /* NSMutableString+Additions.m in Sources */,
 				2624746C19FC5E1700D78124 /* VREntry.m in Sources */,
 				1806480E1A0113A900C1AE59 /* VRApps.m in Sources */,
 				184D9C4719FFA19F00BA0462 /* VRIcon.m in Sources */,
+				189F4F7F1A024D94009BEEE4 /* VRHomeViewModel.m in Sources */,
 				1847B22A19F68287001104C2 /* VRCommunicationManager.m in Sources */,
 				26DECF2619F855D4003BB9A1 /* VRRequestManager.m in Sources */,
 				263BBC6A19F3236E006C04D9 /* VRAppDelegate.m in Sources */,
+				189F4F751A022E74009BEEE4 /* VRHomeViewController.m in Sources */,
 				263BBC6919F3236E006C04D9 /* main.m in Sources */,
 				184D9C4A19FFA45E00BA0462 /* VRPrice.m in Sources */,
 			);
