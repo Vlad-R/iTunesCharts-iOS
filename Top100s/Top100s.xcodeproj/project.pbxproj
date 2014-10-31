@@ -12,6 +12,8 @@
 		1847B22A19F68287001104C2 /* VRCommunicationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1847B22919F68287001104C2 /* VRCommunicationManager.m */; };
 		184D9C4719FFA19F00BA0462 /* VRIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 184D9C4619FFA19F00BA0462 /* VRIcon.m */; };
 		184D9C4A19FFA45E00BA0462 /* VRPrice.m in Sources */ = {isa = PBXBuildFile; fileRef = 184D9C4919FFA45E00BA0462 /* VRPrice.m */; };
+		186DD9861A038CB5009D4315 /* UIView+Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = 186DD9851A038CB5009D4315 /* UIView+Activity.m */; };
+		186DD9891A03AEC3009D4315 /* UIColor+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 186DD9881A03AEC3009D4315 /* UIColor+Additions.m */; };
 		1883C66119F9215C004AA032 /* VRRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1883C66019F9215C004AA032 /* VRRequest.m */; };
 		1883C66519F92FA1004AA032 /* VRDataParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1883C66419F92FA1004AA032 /* VRDataParser.m */; };
 		189F4F751A022E74009BEEE4 /* VRHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189F4F741A022E74009BEEE4 /* VRHomeViewController.m */; };
@@ -41,6 +43,10 @@
 		184D9C4919FFA45E00BA0462 /* VRPrice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRPrice.m; sourceTree = "<group>"; };
 		184EAAEC19FE56490084FC05 /* VRMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRMacros.h; sourceTree = "<group>"; };
 		184EAAED19FE669D0084FC05 /* VRFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRFunctions.h; sourceTree = "<group>"; };
+		186DD9841A038CB5009D4315 /* UIView+Activity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Activity.h"; sourceTree = "<group>"; };
+		186DD9851A038CB5009D4315 /* UIView+Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Activity.m"; sourceTree = "<group>"; };
+		186DD9871A03AEC3009D4315 /* UIColor+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Additions.h"; sourceTree = "<group>"; };
+		186DD9881A03AEC3009D4315 /* UIColor+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Additions.m"; sourceTree = "<group>"; };
 		1883C65F19F9215C004AA032 /* VRRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRRequest.h; sourceTree = "<group>"; };
 		1883C66019F9215C004AA032 /* VRRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRRequest.m; sourceTree = "<group>"; };
 		1883C66319F92FA1004AA032 /* VRDataParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRDataParser.h; sourceTree = "<group>"; };
@@ -111,6 +117,15 @@
 				184D9C4919FFA45E00BA0462 /* VRPrice.m */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		186DD9831A038C07009D4315 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				186DD9841A038CB5009D4315 /* UIView+Activity.h */,
+				186DD9851A038CB5009D4315 /* UIView+Activity.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		1883C66219F92F18004AA032 /* Data Handling */ = {
@@ -206,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				189F4F721A022E4A009BEEE4 /* Home */,
+				186DD9831A038C07009D4315 /* Views */,
 				263BBC6519F3236E006C04D9 /* LaunchScreen.xib */,
 			);
 			path = "User Interface";
@@ -218,6 +234,8 @@
 				184EAAED19FE669D0084FC05 /* VRFunctions.h */,
 				26DECF2119F84FEE003BB9A1 /* NSMutableString+Additions.h */,
 				26DECF2219F84FEE003BB9A1 /* NSMutableString+Additions.m */,
+				186DD9871A03AEC3009D4315 /* UIColor+Additions.h */,
+				186DD9881A03AEC3009D4315 /* UIColor+Additions.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -297,11 +315,13 @@
 				18E198CB19FA880B00DEF9A4 /* VRModel.m in Sources */,
 				189F4F821A024EDD009BEEE4 /* VRHomeTableViewCell.m in Sources */,
 				1883C66119F9215C004AA032 /* VRRequest.m in Sources */,
+				186DD9861A038CB5009D4315 /* UIView+Activity.m in Sources */,
 				26DECF2319F84FEE003BB9A1 /* NSMutableString+Additions.m in Sources */,
 				2624746C19FC5E1700D78124 /* VREntry.m in Sources */,
 				1806480E1A0113A900C1AE59 /* VRApps.m in Sources */,
 				184D9C4719FFA19F00BA0462 /* VRIcon.m in Sources */,
 				189F4F7F1A024D94009BEEE4 /* VRHomeViewModel.m in Sources */,
+				186DD9891A03AEC3009D4315 /* UIColor+Additions.m in Sources */,
 				1847B22A19F68287001104C2 /* VRCommunicationManager.m in Sources */,
 				26DECF2619F855D4003BB9A1 /* VRRequestManager.m in Sources */,
 				263BBC6A19F3236E006C04D9 /* VRAppDelegate.m in Sources */,

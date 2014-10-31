@@ -13,8 +13,9 @@
 @implementation VRHomeViewModel
 
 - (void)fetchModel:(void (^)())completion {
+	__weak typeof(self) weakSelf = self;
 	[[VRCommunicationManager sharedManager] freeMobileAppsWithLimit:10 completion:^(VRApps *model, NSError *error) {
-		self.model = model;
+		weakSelf.model = model;
 		if (completion) {
 			completion();
 		}
