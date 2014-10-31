@@ -12,6 +12,7 @@
 #import "VREntry.h"
 #import "VRHomeTableViewCell.h"
 #import "VRHomeViewModel.h"
+#import "UIView+Activity.h"
 
 static NSString *kHomeCellID = @"home_cell_id";
 
@@ -32,10 +33,12 @@ static NSString *kHomeCellID = @"home_cell_id";
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	
+    self.view.activityViewVisible = YES;
 	__weak typeof(self) weakSelf = self;
 	[self.viewModel fetchModel:^{
 		dispatch_async(dispatch_get_main_queue(), ^{
 			[weakSelf.tableView reloadData];
+            weakSelf.view.activityViewVisible = NO;
 		});
 	}];
 }
