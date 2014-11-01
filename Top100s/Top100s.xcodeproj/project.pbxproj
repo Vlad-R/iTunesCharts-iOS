@@ -26,6 +26,7 @@
 		263BBC6919F3236E006C04D9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 263BBC6119F3236E006C04D9 /* main.m */; };
 		263BBC6A19F3236E006C04D9 /* VRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 263BBC6319F3236E006C04D9 /* VRAppDelegate.m */; };
 		263BBC6B19F3236E006C04D9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 263BBC6519F3236E006C04D9 /* LaunchScreen.xib */; };
+		26C243721A05950C001CEFD1 /* SampleResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 26C243711A05950C001CEFD1 /* SampleResponse.json */; };
 		26DECF2319F84FEE003BB9A1 /* NSMutableString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 26DECF2219F84FEE003BB9A1 /* NSMutableString+Additions.m */; };
 		26DECF2619F855D4003BB9A1 /* VRRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 26DECF2519F855D4003BB9A1 /* VRRequestManager.m */; };
 /* End PBXBuildFile section */
@@ -70,6 +71,7 @@
 		263BBC6219F3236E006C04D9 /* VRAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRAppDelegate.h; sourceTree = "<group>"; };
 		263BBC6319F3236E006C04D9 /* VRAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRAppDelegate.m; sourceTree = "<group>"; };
 		263BBC6519F3236E006C04D9 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		26C243711A05950C001CEFD1 /* SampleResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SampleResponse.json; sourceTree = "<group>"; };
 		26DECF2119F84FEE003BB9A1 /* NSMutableString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableString+Additions.h"; sourceTree = "<group>"; };
 		26DECF2219F84FEE003BB9A1 /* NSMutableString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableString+Additions.m"; sourceTree = "<group>"; };
 		26DECF2419F855D4003BB9A1 /* VRRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRRequestManager.h; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 			children = (
 				263BBC5D19F3236E006C04D9 /* Storyboards */,
 				263BBC5B19F3236E006C04D9 /* Images.xcassets */,
+				26C243701A0594D5001CEFD1 /* Other */,
 				263BBC5C19F3236E006C04D9 /* Info.plist */,
 			);
 			path = Resources;
@@ -225,6 +228,14 @@
 				263BBC6519F3236E006C04D9 /* LaunchScreen.xib */,
 			);
 			path = "User Interface";
+			sourceTree = "<group>";
+		};
+		26C243701A0594D5001CEFD1 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				26C243711A05950C001CEFD1 /* SampleResponse.json */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 		26DECF1719F848A5003BB9A1 /* Utils */ = {
@@ -297,6 +308,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26C243721A05950C001CEFD1 /* SampleResponse.json in Resources */,
 				263BBC6B19F3236E006C04D9 /* LaunchScreen.xib in Resources */,
 				263BBC6819F3236E006C04D9 /* Main.storyboard in Resources */,
 				263BBC6619F3236E006C04D9 /* Images.xcassets in Resources */,
