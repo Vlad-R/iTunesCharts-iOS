@@ -8,6 +8,7 @@
 
 #import "VRDataParser.h"
 
+#import "NSMutableString+Additions.h"
 #import "VRRequest.h"
 
 @implementation VRDataParser
@@ -26,6 +27,17 @@
 	[self parseDictionary:obj forModel:model];
 	
 	return model;
+}
+
++ (NSString *)parametersForRequest:(VRRequest *)request {
+    NSMutableString *result = [NSMutableString string];
+    NSDictionary *parameterMap = [request parameterMap];
+    for (NSString *key in parameterMap.allKeys) {
+        NSString *value = [request valueForKey:parameterMap[key]];
+        [result addParameter:value forKey:key];
+    }
+    
+    return result;
 }
 
 #pragma mark - Private

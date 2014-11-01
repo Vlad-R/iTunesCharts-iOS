@@ -13,5 +13,6 @@
 @interface VRDataParser : NSObject
 
 + (id<VRModel>)parseResponseData:(NSData *)data forRequest:(VRRequest *)request;
++ (NSString *)parametersForRequest:(VRRequest *)request;
 
 @end

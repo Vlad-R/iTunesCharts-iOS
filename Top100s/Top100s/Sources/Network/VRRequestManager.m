@@ -8,7 +8,7 @@
 
 #import "VRRequestManager.h"
 
-#import "NSMutableString+Additions.h"
+#import "VRDataParser.h"
 #import "VRRequest.h"
 
 @implementation VRRequestManager
@@ -19,7 +19,7 @@
     NSMutableURLRequest *urlRequest = [[NSMutableURLRequest alloc] init];
     
     NSString *url = [NSString stringWithFormat:@"%@%@", [request host], [request endpoint]];
-    NSString *parameters = [self parametersForRequest:request];
+    NSString *parameters = [VRDataParser parametersForRequest:request];
     
     switch ([request type]) {
         case VRRequestTypeGET: {
@@ -39,19 +39,6 @@
     urlRequest.URL = [NSURL URLWithString:url];
     
     return urlRequest;
-}
-
-#pragma mark - Private
-
-+ (NSString *)parametersForRequest:(VRRequest *)request {
-    NSMutableString *result = [NSMutableString string];
-    NSDictionary *parameterMap = [request parameterMap];
-    for (NSString *key in parameterMap.allKeys) {
-        NSString *value = [request valueForKey:parameterMap[key]];
-        [result addParameter:value forKey:key];
-    }
-    
-    return result;
 }
 
 @end
