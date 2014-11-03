@@ -10,6 +10,7 @@
 
 #import "VRApps.h"
 #import "VRDataParser.h"
+#import "VRNetworkActivityManager.h"
 #import "VRRequest.h"
 #import "VRRequestManager.h"
 
@@ -24,7 +25,6 @@
 
 + (instancetype)sharedManager {
 	static VRCommunicationManager *sharedInstance = nil;
-	
 	static dispatch_once_t onceToken;
 	dispatch_once(&onceToken, ^{
 		sharedInstance = [[self alloc] init];
@@ -82,8 +82,9 @@
 														 block(model, error);
 													 }
 												 }];
+    [[VRNetworkActivityManager sharedManager] observeURLSessionTask:task];
 	[task resume];
-	
+    
 	return task;
 }
 
