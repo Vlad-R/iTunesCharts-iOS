@@ -11,5 +11,6 @@
 @interface VRListViewController : UITableViewController
 
 @property (nonatomic, strong) NSArray *list;
+@property (nonatomic, copy) void(^selectCellAction)(UITableView *, NSIndexPath *);
 
 @end

@@ -19,7 +19,7 @@
     }
 }
 
-#pragma mark - Table view data source
+#pragma mark - UITableViewDatasource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.list.count;
@@ -34,6 +34,15 @@
     }
     
     return cell;
+}
+
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (self.selectCellAction) {
+        self.selectCellAction(tableView, indexPath);
+    }
 }
 
 @end
