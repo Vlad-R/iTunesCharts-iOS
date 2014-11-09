@@ -20,5 +20,7 @@
 #define pmap(keys, property) JSON_KEYPATH(keys):PROPERTY(property)
 #define transform(property, cls) PROPERTY(property):CLASS(cls)
 
+#define ClassMap(key, cls) key: CLASS(cls)
+
 
 #endif

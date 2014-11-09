@@ -8,21 +8,24 @@
 
 #import "VRListViewController.h"
 
+#import "VRListViewModel.h"
+
 @implementation VRListViewController
 
-#pragma mark - Accessors
+#pragma mark - Navigation
 
-- (void)setList:(NSArray *)list {
-    if (_list != list) {
-        _list = list;
-        [self.tableView reloadData];
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"pushList"]) {
+        NSString *nextViewModel = sender;
+        id viewModel = [[NSClassFromString(nextViewModel) alloc] init];
+        [segue.destinationViewController setViewModel:viewModel];
     }
 }
 
 #pragma mark - UITableViewDatasource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.list.count;
+    return self.viewModel.list.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -30,7 +33,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellIdent];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kCellIdent];
-        cell.textLabel.text = self.list[indexPath.row];
+        cell.textLabel.text = self.viewModel.list[indexPath.row];
     }
     
     return cell;
@@ -40,8 +43,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    if (self.selectCellAction) {
-        self.selectCellAction(tableView, indexPath);
+    
+    NSString *key = self.viewModel.list[indexPath.row];
+    NSString *nextViewModel = self.viewModel.viewModelMap[key];
+    if (nextViewModel) {
+        [self performSegueWithIdentifier:@"pushList" sender:nextViewModel];
     }
 }
 

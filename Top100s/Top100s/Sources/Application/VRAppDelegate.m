@@ -9,23 +9,16 @@
 #import "VRAppDelegate.h"
 
 #import "VRListViewController.h"
+#import "VRMediaTypeListViewModel.h"
 
 @implementation VRAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     UISplitViewController *splitVC = (UISplitViewController *)self.window.rootViewController;
-    __weak UINavigationController *masterNavigationController = (UINavigationController *)splitVC.viewControllers[0];
+    UINavigationController *masterNavigationController = (UINavigationController *)splitVC.viewControllers[0];
     
     VRListViewController *mediaTypeListVC = (VRListViewController *)masterNavigationController.topViewController;
-    mediaTypeListVC.list = @[ @"iOS Apps", @"Mac Apps" ];
-    mediaTypeListVC.selectCellAction = ^(UITableView *tableView, NSIndexPath *indexPath) {
-        VRListViewController *feedTypeListVC = [[VRListViewController alloc] init];
-        feedTypeListVC.list = @[ @"Top Free Aplications", @"Top Paid Applications" ];
-        feedTypeListVC.selectCellAction = ^(UITableView *tableView, NSIndexPath *indexPath) {
-            NSLog(@"%@", indexPath);
-        };
-        [masterNavigationController pushViewController:feedTypeListVC animated:YES];
-    };
+    mediaTypeListVC.viewModel = [[VRMediaTypeListViewModel alloc] init];
     
     return YES;
 }

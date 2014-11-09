@@ -100,15 +100,48 @@
             </objects>
             <point key="canvasLocation" x="448" y="1100"/>
         </scene>
-        <!--List View Controller-->
+        <!--Media Types-->
         <scene sceneID="2Hp-Dp-FoR">
             <objects>
                 <viewController id="g9c-aL-KgE" customClass="VRListViewController" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="srR-6a-tyk"/>
+                    <navigationItem key="navigationItem" title="Media Types" id="srR-6a-tyk"/>
+                    <connections>
+                        <segue destination="Se8-OW-xCB" kind="show" identifier="pushList" id="TNi-k8-s49"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qlP-ca-xg8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1186" y="1100"/>
+        </scene>
+        <!--List View Controller-->
+        <scene sceneID="gre-6P-lTb">
+            <objects>
+                <viewController id="Se8-OW-xCB" customClass="VRListViewController" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="lxg-np-0et" kind="show" identifier="pushList" id="drA-ct-yQt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mFs-d6-Z4Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1920" y="1100"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="LlH-Gx-NLx">
+            <objects>
+                <viewController id="lxg-np-0et" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ffh-8S-ZmV"/>
+                        <viewControllerLayoutGuide type="bottom" id="NKz-jb-ehk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tlA-do-WPJ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qz0-jh-tmd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2673" y="1100"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="EhS-wk-vhY">

@@ -8,9 +8,10 @@
 
 @import UIKit;
 
+@class VRListViewModel;
+
 @interface VRListViewController : UITableViewController
 
-@property (nonatomic, strong) NSArray *list;
-@property (nonatomic, copy) void(^selectCellAction)(UITableView *, NSIndexPath *);
+@property (nonatomic, strong) VRListViewModel *viewModel;
 
 @end
