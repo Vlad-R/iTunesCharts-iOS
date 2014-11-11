@@ -21,8 +21,7 @@ static const NSString *kMacApps = @"Mac Apps";
 
 - (NSDictionary *)viewModelMap {
     return @{ ClassMap(kiOSApps, VRAppsFeedTypeListViewModel),
-              ClassMap(kMacApps, VRAppsFeedTypeListViewModel)
-              };
+              ClassMap(kMacApps, VRAppsFeedTypeListViewModel) };
 }
 
 @end

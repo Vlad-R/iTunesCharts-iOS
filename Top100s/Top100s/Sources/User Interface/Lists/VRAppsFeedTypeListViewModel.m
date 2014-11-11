@@ -8,6 +8,8 @@
 
 #import "VRAppsFeedTypeListViewModel.h"
 
+#import "VRMediaViewModel.h"
+
 static const NSString *kTopFreeApps = @"Top Free Aplications";
 static const NSString *kTopPaidApps = @"Top Paid Applications";
 
@@ -18,9 +20,8 @@ static const NSString *kTopPaidApps = @"Top Paid Applications";
 }
 
 - (NSDictionary *)viewModelMap {
-    return @{ ClassMap(kTopFreeApps, @""),
-              ClassMap(kTopPaidApps, @"")
-              };
+    return @{ ClassMap(kTopFreeApps, VRMediaViewModel),
+              ClassMap(kTopPaidApps, VRMediaViewModel) };
 }
 
 @end
