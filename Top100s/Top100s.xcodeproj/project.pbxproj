@@ -227,10 +227,11 @@
 		263BBC6419F3236E006C04D9 /* User Interface */ = {
 			isa = PBXGroup;
 			children = (
+				263BBC6519F3236E006C04D9 /* LaunchScreen.xib */,
 				26B704D61A12A84B00DB2DB2 /* Media */,
 				2691C4A81A0FA7C800763E57 /* Lists */,
 				186DD9831A038C07009D4315 /* Views */,
-				263BBC6519F3236E006C04D9 /* LaunchScreen.xib */,
+				269A90661A12D05F000CA132 /* View Controllers */,
 			);
 			path = "User Interface";
 			sourceTree = "<group>";
@@ -248,6 +249,13 @@
 				2691C4B31A0FAD7F00763E57 /* VRAppsFeedTypeListViewModel.m */,
 			);
 			path = Lists;
+			sourceTree = "<group>";
+		};
+		269A90661A12D05F000CA132 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 		26B704D61A12A84B00DB2DB2 /* Media */ = {

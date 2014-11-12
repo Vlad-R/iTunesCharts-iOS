@@ -15,7 +15,7 @@
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"pushList"]) {
+    if ([segue.identifier isEqualToString:@"pushList"] && sender && [segue.destinationViewController respondsToSelector:@selector(setViewModel:)]) {
         NSString *nextViewModel = sender;
         id viewModel = [[NSClassFromString(nextViewModel) alloc] init];
         [segue.destinationViewController setViewModel:viewModel];
