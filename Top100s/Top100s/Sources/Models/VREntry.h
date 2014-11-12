@@ -14,6 +14,7 @@
 
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *title;
+@property (nonatomic, copy) NSString *category;
 @property (nonatomic, copy) NSArray *icons;
 @property (nonatomic, copy) NSString *summary;
 @property (nonatomic, strong) VRPrice *price;

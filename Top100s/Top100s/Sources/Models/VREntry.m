@@ -16,6 +16,7 @@
 - (NSDictionary *)responseMap {
 	return @{ pmap((@[ @"im:name", @"label" ]), name),
 			  pmap((@[ @"title", @"label" ]), title),
+              pmap((@[ @"category", @"attributes", @"label" ]), category),
 			  pmap((@[ @"im:image" ]), icons),
 			  pmap((@[ @"summary", @"label" ]), summary),
 			  pmap((@[ @"im:price" ]), price),

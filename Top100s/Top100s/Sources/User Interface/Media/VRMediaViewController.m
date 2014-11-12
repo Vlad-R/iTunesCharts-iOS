@@ -24,10 +24,6 @@ static NSString *kMediaCellID = @"media_cell_id";
 
 @implementation VRMediaViewController
 
-- (void)awakeFromNib {
-    self.viewModel = [[VRMediaViewModel alloc] init];
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -48,11 +44,11 @@ static NSString *kMediaCellID = @"media_cell_id";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    VREntry *entry = self.viewModel.model.entries[indexPath.row];
+    VREntry *entry = self.viewModel.model.entries[indexPath.row];
     
     VRMediaTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kMediaCellID];
-    
-    //Customize cell
+    cell.orderNumber = indexPath.row + 1;
+    cell.entry = entry;
     
     return cell;
 }

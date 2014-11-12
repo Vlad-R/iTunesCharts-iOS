@@ -8,6 +8,11 @@
 
 @import UIKit;
 
+@class VREntry;
+
 @interface VRMediaTableViewCell : UITableViewCell
+
+@property (nonatomic, assign) NSUInteger orderNumber;
+@property (nonatomic, strong) VREntry *entry;
 
 @end
