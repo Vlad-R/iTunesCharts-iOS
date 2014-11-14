@@ -41,6 +41,8 @@
 		self.operationQueue.maxConcurrentOperationCount = 1;
 		
 		NSURLSessionConfiguration *sessionConfig = [NSURLSessionConfiguration defaultSessionConfiguration];
+        sessionConfig.timeoutIntervalForRequest = 60.0;
+        
 		self.session = [NSURLSession sessionWithConfiguration:sessionConfig
 													 delegate:nil
 												delegateQueue:self.operationQueue];
