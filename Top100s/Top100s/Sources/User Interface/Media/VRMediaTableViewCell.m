@@ -9,12 +9,14 @@
 #import "VRMediaTableViewCell.h"
 
 #import "VREntry.h"
+#import "VRIcon.h"
+#import "VRImageView.h"
 #import "VRPrice.h"
 
 @interface VRMediaTableViewCell ()
 
 @property (nonatomic, weak) IBOutlet UILabel *orderNumberLabel;
-@property (nonatomic, weak) IBOutlet UIImageView *iconImageView;
+@property (nonatomic, weak) IBOutlet VRImageView *iconImageView;
 @property (nonatomic, weak) IBOutlet UILabel *nameLabel;
 @property (nonatomic, weak) IBOutlet UILabel *categoryLabel;
 @property (nonatomic, weak) IBOutlet UILabel *priceLabel;
@@ -40,6 +42,7 @@
         self.nameLabel.text = _entry.name;
         self.categoryLabel.text = _entry.category;
         self.priceLabel.text = _entry.price.label;
+        [self.iconImageView loadImageFromURL:[(VRIcon *)_entry.icons[2] URL]];
     }
 }
 

@@ -14,7 +14,9 @@
 
 + (instancetype)sharedManager;
 
-- (NSURLSessionDataTask *)freeMobileAppsWithLimit:(NSUInteger)limit completion:(void(^)(VRApps *model, NSError *error))block;
-- (NSURLSessionDataTask *)paidMobileAppsWithLimit:(NSUInteger)limit completion:(void(^)(VRApps *model, NSError *error))block;
+- (NSURLSessionTask *)freeMobileAppsWithLimit:(NSUInteger)limit completion:(void(^)(VRApps *model, NSError *error))block;
+- (NSURLSessionTask *)paidMobileAppsWithLimit:(NSUInteger)limit completion:(void(^)(VRApps *model, NSError *error))block;
+
+- (NSURLSessionDownloadTask *)downloadFileFromURL:(NSURL *)URL completion:(void(^)(NSString *tempPath, NSString *fileName, NSError *error))block;
 
 @end

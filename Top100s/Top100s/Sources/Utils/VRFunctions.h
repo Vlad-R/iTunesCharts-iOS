@@ -29,5 +29,13 @@ static inline NSArray *JSON_KEYS(NSString *string) {
 	return [string componentsSeparatedByString:@"->"];
 }
 
+static inline NSString *NAME_FOR_URL(NSString *URL) {
+    NSString *result = [URL stringByReplacingOccurrencesOfString:@"/" withString:@""];
+    result = [result stringByReplacingOccurrencesOfString:@":" withString:@""];
+    result = [result stringByReplacingOccurrencesOfString:@"." withString:@""];
+    
+    return result;
+}
+
 
 #endif

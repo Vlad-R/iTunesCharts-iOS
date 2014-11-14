@@ -50,18 +50,33 @@
 
 #pragma mark - Public
 
-- (NSURLSessionDataTask *)freeMobileAppsWithLimit:(NSUInteger)limit completion:(void(^)(VRApps *, NSError *))block {
+- (NSURLSessionTask *)freeMobileAppsWithLimit:(NSUInteger)limit completion:(void(^)(VRApps *, NSError *))block {
 	VRFreeMobileAppsRequest *req = [[VRFreeMobileAppsRequest alloc] init];
 	req.limit = [NSString stringWithFormat:@"%lu", limit];
 	
 	return [self dataTaskWithRequest:req completion:block];
 }
 
-- (NSURLSessionDataTask *)paidMobileAppsWithLimit:(NSUInteger)limit completion:(void (^)(VRApps *, NSError *))block {
+- (NSURLSessionTask *)paidMobileAppsWithLimit:(NSUInteger)limit completion:(void (^)(VRApps *, NSError *))block {
 	VRPaidMobileAppsRequest *req = [[VRPaidMobileAppsRequest alloc] init];
 	req.limit = [NSString stringWithFormat:@"%lu", limit];
 	
 	return [self dataTaskWithRequest:req completion:block];
+}
+
+- (NSURLSessionDownloadTask *)downloadFileFromURL:(NSURL *)URL completion:(void(^)(NSString *tempPath, NSString *fileName, NSError *error))block {
+    if (!block) {
+        return nil;
+    }
+    
+    NSURLSessionDownloadTask *task = [self.session downloadTaskWithURL:URL
+                                                     completionHandler:^(NSURL *location, NSURLResponse *response, NSError *error) {
+                                                         block(location.path, NAME_FOR_URL(URL.absoluteString), error);
+                                                     }];
+    [[VRNetworkActivityManager sharedManager] observeURLSessionTask:task];
+    [task resume];
+    
+    return task;
 }
 
 #pragma mark - Private

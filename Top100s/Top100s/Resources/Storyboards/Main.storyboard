@@ -35,7 +35,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rfs-DS-6tq">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rfs-DS-6tq" customClass="VRImageView">
                                                     <rect key="frame" x="65" y="5" width="50" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="50" id="Xbs-wd-JdE"/>
@@ -90,7 +90,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="categoryLabel" destination="5Rr-WC-ixX" id="HY2-6k-ACk"/>
-                                            <outlet property="iconImageView" destination="rfs-DS-6tq" id="Add-Yh-cdm"/>
+                                            <outlet property="iconImageView" destination="rfs-DS-6tq" id="bQ3-x8-7IS"/>
                                             <outlet property="nameLabel" destination="x78-fG-0l5" id="pcm-Nh-ya0"/>
                                             <outlet property="orderNumberLabel" destination="tsx-PM-c8i" id="ie1-3L-Rae"/>
                                             <outlet property="priceLabel" destination="kvW-9D-pAs" id="CgM-WQ-pPD"/>
