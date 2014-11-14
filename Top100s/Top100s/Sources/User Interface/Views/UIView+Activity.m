@@ -13,7 +13,13 @@
 
 static char kActivityViewKey;
 
-@implementation UIView (Activity)
+@interface UIView (Activity_Private)
+
+@property (nonatomic, strong) VRActivityView *activityView;
+
+@end
+
+@implementation UIView (Activity_Private)
 
 - (VRActivityView *)activityView {
     return objc_getAssociatedObject(self, &kActivityViewKey);
@@ -22,6 +28,10 @@ static char kActivityViewKey;
 - (void)setActivityView:(VRActivityView *)activityView {
     objc_setAssociatedObject(self, &kActivityViewKey, activityView, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
+
+@end
+
+@implementation UIView (Activity)
 
 - (BOOL)activityViewVisible {
     [self setupActivityView];

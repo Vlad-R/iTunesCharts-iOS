@@ -13,7 +13,6 @@
 
 @interface UIView (Activity)
 
-@property (nonatomic, strong) VRActivityView *activityView;
 @property (nonatomic, assign) BOOL activityViewVisible;
 
 @end
