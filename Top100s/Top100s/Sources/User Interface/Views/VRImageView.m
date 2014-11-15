@@ -16,16 +16,17 @@
 
 - (void)loadImageFromURL:(NSString *)URL {
     NSString *imageName = NAME_FOR_URL(URL);
-    UIImage *cachedImage = [VRCacheManager cachedImageWithName:imageName];
+    UIImage *cachedImage = [[VRCacheManager sharedManager] cachedImageWithName:imageName];
     if (cachedImage) {
         self.image = cachedImage;
+        
     } else {
         self.activityViewVisible = YES;
         [[VRCommunicationManager sharedManager] downloadFileFromURL:[NSURL URLWithString:URL]
                                                          completion:^(NSString *tempPath, NSString *fileName, NSError *error) {
-                                                             [VRCacheManager moveImageToCacheFromPath:tempPath withName:imageName];
+                                                             [[VRCacheManager sharedManager] moveImageToCacheFromPath:tempPath withName:imageName];
                                                              dispatch_async(dispatch_get_main_queue(), ^{
-                                                                 self.image = [VRCacheManager cachedImageWithName:imageName];
+                                                                 self.image = [[VRCacheManager sharedManager] cachedImageWithName:imageName];
                                                                  self.activityViewVisible = NO;
                                                              });
                                                          }];

@@ -10,8 +10,10 @@
 
 @interface VRCacheManager : NSObject
 
-+ (BOOL)moveImageToCacheFromPath:(NSString *)path withName:(NSString *)name;
-+ (BOOL)cacheImage:(UIImage *)image withName:(NSString *)name;
-+ (UIImage *)cachedImageWithName:(NSString *)name;
++ (instancetype)sharedManager;
+
+- (BOOL)moveImageToCacheFromPath:(NSString *)path withName:(NSString *)name;
+- (BOOL)cacheImage:(UIImage *)image withName:(NSString *)name;
+- (UIImage *)cachedImageWithName:(NSString *)name;
 
 @end
