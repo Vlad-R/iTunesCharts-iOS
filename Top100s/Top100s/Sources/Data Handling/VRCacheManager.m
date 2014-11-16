@@ -104,16 +104,16 @@ static const NSTimeInterval kItemLifeSpan = 2.0 * 60 * 24; //2 days
 
 #pragma mark - Destruction
 
-- (BOOL)deleteItemAtPath:(NSString *)path {
-    return [[NSFileManager defaultManager] removeItemAtPath:path error:nil];
-}
-
 - (BOOL)clearImageCache {
-    return [[NSFileManager defaultManager] removeItemAtPath:[self imagesDirectoryPath] error:nil];
+    return [self deleteItemAtPath:[self imagesDirectoryPath]];
 }
 
 - (BOOL)clearCache {
-    return [[NSFileManager defaultManager] removeItemAtPath:[self dataCacheDirectoryPath] error:nil];
+    return [self deleteItemAtPath:[self dataCacheDirectoryPath]];
+}
+
+- (BOOL)deleteItemAtPath:(NSString *)path {
+    return [[NSFileManager defaultManager] removeItemAtPath:path error:nil];
 }
 
 @end

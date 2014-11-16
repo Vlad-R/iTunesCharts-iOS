@@ -53,4 +53,12 @@ static NSString *kMediaCellID = @"media_cell_id";
     return cell;
 }
 
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    [self performSegueWithIdentifier:@"showDetails" sender:nil];
+}
+
 @end

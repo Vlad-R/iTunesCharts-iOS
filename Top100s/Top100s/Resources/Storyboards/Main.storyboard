@@ -113,6 +113,7 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="YmJ-JJ-R4W" id="eiL-fO-xyd"/>
+                        <segue destination="5si-Al-t74" kind="showDetail" identifier="showDetails" id="hr5-Yf-BdW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Byr-1r-4hU" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -135,7 +136,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Av1-mb-keX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="447" y="1765"/>
+            <point key="canvasLocation" x="448" y="1849"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NoM-jR-8RU">
@@ -181,7 +182,7 @@
         <!--Split View Controller-->
         <scene sceneID="EhS-wk-vhY">
             <objects>
-                <splitViewController id="Tn9-kM-Bce" sceneMemberID="viewController">
+                <splitViewController id="Tn9-kM-Bce" customClass="VRSplitViewController" sceneMemberID="viewController">
                     <connections>
                         <segue destination="IT5-ea-azv" kind="relationship" relationship="masterViewController" id="ztg-Pw-akL"/>
                         <segue destination="5si-Al-t74" kind="relationship" relationship="detailViewController" id="qsJ-ik-Kq7"/>
@@ -192,4 +193,7 @@
             <point key="canvasLocation" x="-372" y="1432"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="qsJ-ik-Kq7"/>
+    </inferredMetricsTieBreakers>
 </document>
