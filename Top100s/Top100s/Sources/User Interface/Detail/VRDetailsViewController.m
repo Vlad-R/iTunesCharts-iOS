@@ -29,6 +29,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.title = self.entry.name;
+    self.navigationItem.leftBarButtonItem = self.navigationController.splitViewController.displayModeButtonItem;
+    self.navigationItem.leftItemsSupplementBackButton = YES;
+    
     [self.imageView loadImageFromURL:[(VRIcon *)self.entry.icons[2] URL]];
     self.nameLabel.text = self.entry.name;
     self.developerLabel.text = self.entry.artist;

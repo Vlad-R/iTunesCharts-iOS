@@ -39,7 +39,11 @@ static NSString *kMediaCellID = @"media_cell_id";
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    [segue.destinationViewController setEntry:sender];
+    UINavigationController *navController = segue.destinationViewController;
+    id vc = navController.topViewController;
+    if ([vc respondsToSelector:@selector(setEntry:)]) {
+        [vc setEntry:sender];
+    }
 }
 
 #pragma mark - UITableViewDataSource
