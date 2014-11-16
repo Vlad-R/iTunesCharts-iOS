@@ -13,6 +13,7 @@
 @interface VREntry : NSObject <VRModel>
 
 @property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSString *artist;
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *category;
 @property (nonatomic, copy) NSArray *icons;

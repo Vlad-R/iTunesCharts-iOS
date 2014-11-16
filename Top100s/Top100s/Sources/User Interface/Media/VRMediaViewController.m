@@ -10,6 +10,7 @@
 
 #import "UIView+Activity.h"
 #import "VRApps.h"
+#import "VRDetailsViewController.h"
 #import "VREntry.h"
 #import "VRMediaTableViewCell.h"
 #import "VRMediaViewModel.h"
@@ -37,6 +38,10 @@ static NSString *kMediaCellID = @"media_cell_id";
     }];
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    [segue.destinationViewController setEntry:sender];
+}
+
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -58,7 +63,9 @@ static NSString *kMediaCellID = @"media_cell_id";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    [self performSegueWithIdentifier:@"showDetails" sender:nil];
+    VREntry *entry = self.viewModel.model.entries[indexPath.row];
+    
+    [self performSegueWithIdentifier:@"showDetails" sender:entry];
 }
 
 @end
