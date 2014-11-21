@@ -9,6 +9,7 @@
 #import "VRCommunicationManager.h"
 
 #import "VRApps.h"
+#import "VRBooks.h"
 #import "VRDataParser.h"
 #import "VRNetworkActivityManager.h"
 #import "VRRequest.h"
@@ -64,6 +65,27 @@
 	req.limit = [NSString stringWithFormat:@"%lu", limit];
 	
 	return [self dataTaskWithRequest:req completion:block];
+}
+
+- (NSURLSessionTask *)freeBooksWithLimit:(NSUInteger)limit completion:(void (^)(VRBooks *, NSError *))block {
+    VRFreeBooksRequest *req = [[VRFreeBooksRequest alloc] init];
+    req.limit = [NSString stringWithFormat:@"%lu", limit];
+    
+    return [self dataTaskWithRequest:req completion:block];
+}
+
+- (NSURLSessionTask *)paidBooksWithLimit:(NSUInteger)limit completion:(void (^)(VRBooks *, NSError *))block {
+    VRPaidBooksRequest *req = [[VRPaidBooksRequest alloc] init];
+    req.limit = [NSString stringWithFormat:@"%lu", limit];
+    
+    return [self dataTaskWithRequest:req completion:block];
+}
+
+- (NSURLSessionTask *)textbooksWithLimit:(NSUInteger)limit completion:(void (^)(VRBooks *, NSError *))block {
+    VRTextbooksRequest *req = [[VRTextbooksRequest alloc] init];
+    req.limit = [NSString stringWithFormat:@"%lu", limit];
+    
+    return [self dataTaskWithRequest:req completion:block];
 }
 
 - (NSURLSessionDownloadTask *)downloadFileFromURL:(NSURL *)URL completion:(void(^)(NSString *tempPath, NSString *fileName, NSError *error))block {

@@ -10,17 +10,19 @@
 
 #import "VRAppsFeedTypeListViewModel.h"
 
+static const NSString *kBooks = @"Books";
 static const NSString *kiOSApps = @"iOS Apps";
 static const NSString *kMacApps = @"Mac Apps";
 
 @implementation VRMediaTypeListViewModel
 
 - (NSArray *)list {
-    return @[ kiOSApps, kMacApps ];
+    return @[ kBooks, kiOSApps, kMacApps ];
 }
 
 - (NSDictionary *)viewModelMap {
-    return @{ ClassMap(kiOSApps, VRAppsFeedTypeListViewModel),
+    return @{ ClassMap(kBooks, VRAppsFeedTypeListViewModel),
+              ClassMap(kiOSApps, VRAppsFeedTypeListViewModel),
               ClassMap(kMacApps, VRAppsFeedTypeListViewModel) };
 }
 

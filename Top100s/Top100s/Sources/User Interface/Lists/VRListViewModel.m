@@ -10,4 +10,14 @@
 
 @implementation VRListViewModel
 
+- (NSArray *)list {
+    ASSERT_MISSING_OVERRIDE_IMPLEMENTATION;
+    return nil;
+}
+
+- (NSDictionary *)viewModelMap {
+    ASSERT_MISSING_OVERRIDE_IMPLEMENTATION;
+    return nil;
+}
+
 @end

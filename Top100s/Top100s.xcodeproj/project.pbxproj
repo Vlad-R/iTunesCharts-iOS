@@ -26,6 +26,7 @@
 		263BBC6B19F3236E006C04D9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 263BBC6519F3236E006C04D9 /* LaunchScreen.xib */; };
 		266281761A18E39300863AC6 /* VRSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 266281751A18E39300863AC6 /* VRSplitViewController.m */; };
 		267920A71A154249003C28A8 /* VRCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 267920A61A154249003C28A8 /* VRCacheManager.m */; };
+		268876D41A1FE16E00A6FD55 /* VRBooks.m in Sources */ = {isa = PBXBuildFile; fileRef = 268876D31A1FE16E00A6FD55 /* VRBooks.m */; };
 		2691C4AB1A0FA7C800763E57 /* VRListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2691C4AA1A0FA7C800763E57 /* VRListViewController.m */; };
 		2691C4AE1A0FA80C00763E57 /* VRListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2691C4AD1A0FA80C00763E57 /* VRListViewModel.m */; };
 		2691C4B11A0FAC6E00763E57 /* VRMediaTypeListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2691C4B01A0FAC6E00763E57 /* VRMediaTypeListViewModel.m */; };
@@ -80,6 +81,8 @@
 		266281751A18E39300863AC6 /* VRSplitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRSplitViewController.m; sourceTree = "<group>"; };
 		267920A51A154249003C28A8 /* VRCacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRCacheManager.h; sourceTree = "<group>"; };
 		267920A61A154249003C28A8 /* VRCacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRCacheManager.m; sourceTree = "<group>"; };
+		268876D21A1FE16E00A6FD55 /* VRBooks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRBooks.h; sourceTree = "<group>"; };
+		268876D31A1FE16E00A6FD55 /* VRBooks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRBooks.m; sourceTree = "<group>"; };
 		2691C4A91A0FA7C800763E57 /* VRListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRListViewController.h; sourceTree = "<group>"; };
 		2691C4AA1A0FA7C800763E57 /* VRListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRListViewController.m; sourceTree = "<group>"; };
 		2691C4AC1A0FA80C00763E57 /* VRListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRListViewModel.h; sourceTree = "<group>"; };
@@ -140,6 +143,8 @@
 				180648071A010AA400C1AE59 /* VRList.m */,
 				1806480C1A0113A900C1AE59 /* VRApps.h */,
 				1806480D1A0113A900C1AE59 /* VRApps.m */,
+				268876D21A1FE16E00A6FD55 /* VRBooks.h */,
+				268876D31A1FE16E00A6FD55 /* VRBooks.m */,
 				2624746A19FC5E1700D78124 /* VREntry.h */,
 				2624746B19FC5E1700D78124 /* VREntry.m */,
 				184D9C4519FFA19F00BA0462 /* VRIcon.h */,
@@ -401,6 +406,7 @@
 				266281761A18E39300863AC6 /* VRSplitViewController.m in Sources */,
 				26DECF2319F84FEE003BB9A1 /* NSMutableString+Additions.m in Sources */,
 				2624746C19FC5E1700D78124 /* VREntry.m in Sources */,
+				268876D41A1FE16E00A6FD55 /* VRBooks.m in Sources */,
 				26B704D91A12A8E500DB2DB2 /* VRMediaViewController.m in Sources */,
 				1806480E1A0113A900C1AE59 /* VRApps.m in Sources */,
 				184D9C4719FFA19F00BA0462 /* VRIcon.m in Sources */,
