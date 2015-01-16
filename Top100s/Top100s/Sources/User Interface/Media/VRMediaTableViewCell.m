@@ -8,7 +8,7 @@
 
 #import "VRMediaTableViewCell.h"
 
-#import "VREntry.h"
+#import "VREntryAdapter.h"
 #import "VRIcon.h"
 #import "VRImageView.h"
 #import "VRPrice.h"
@@ -35,14 +35,14 @@
     }
 }
 
-- (void)setEntry:(VREntry *)entry {
-    if (_entry != entry) {
-        _entry = entry;
+- (void)setModel:(VREntryAdapter *)model {
+    if (_model != model) {
+        _model = model;
         
-        self.nameLabel.text = _entry.name;
-        self.categoryLabel.text = _entry.category;
-        self.priceLabel.text = _entry.price.label;
-        [self.iconImageView loadImageFromURL:[(VRIcon *)_entry.icons[2] URL]];
+        self.nameLabel.text = _model.name;
+        self.categoryLabel.text = _model.category;
+        self.priceLabel.text = _model.price;
+        [self.iconImageView loadImageFromURL:[(VRIcon *)_model.icons[2] URL]];
     }
 }
 

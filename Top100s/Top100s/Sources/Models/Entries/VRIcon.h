@@ -8,7 +8,7 @@
 
 #import "VRModel.h"
 
-@interface VRIcon : NSObject <VRModel>
+@interface VRIcon : NSObject <NSCopying, VRModel>
 
 @property (nonatomic, copy) NSString *URL;
 @property (nonatomic, copy) NSString *height;

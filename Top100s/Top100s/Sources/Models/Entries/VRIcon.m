@@ -10,8 +10,16 @@
 
 @implementation VRIcon
 
+- (id)copyWithZone:(NSZone *)zone {
+    VRIcon *copy = [[VRIcon allocWithZone:zone] init];
+    copy.URL = self.URL;
+    copy.height = self.height;
+    
+    return copy;
+}
+
 - (NSDictionary *)responseMap {
-	return @{ pmap(@[ @"label" ], URL),
+	return @{ pmap((@[ @"label" ]), URL),
 			  pmap((@[ @"attributes", @"height" ]), height) };
 }
 

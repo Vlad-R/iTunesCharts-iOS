@@ -6,12 +6,10 @@
 //  Copyright (c) 2014 Vlad-R. All rights reserved.
 //
 
-@import UIKit;
-
-@class VRMediaViewModel;
+#import "VRMediaViewModel.h"
 
 @interface VRMediaViewController : UIViewController
 
-@property (nonatomic, strong) VRMediaViewModel *viewModel;
+@property (nonatomic, strong) id<VRMediaViewModel> viewModel;
 
 @end

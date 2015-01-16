@@ -12,7 +12,7 @@
 
 #define __FILE_NAME__ [[NSString stringWithFormat:@"%s", __FILE__] lastPathComponent]
 
-#define ASSERT_MISSING_OVERRIDE_IMPLEMENTATION NSAssert(NO, @"Need to override function %s in %@ at line %d", __func__, __FILE_NAME__, __LINE__)
+#define ASSERT_MISSING_OVERRIDE_IMPLEMENTATION NSAssert(NO, @"In class %@, you need to override function %s, from %@, at line %d.", CLASS(self), __func__, __FILE_NAME__, __LINE__)
 
 #define PROPERTY(property) NSStringFromSelector(@selector(property))
 #define CLASS(c) NSStringFromClass([c class])

@@ -8,7 +8,7 @@
 
 #import "VRModel.h"
 
-@interface VRPrice : NSObject <VRModel>
+@interface VRPrice : NSObject <NSCopying, VRModel>
 
 @property (nonatomic, copy) NSString *label;
 @property (nonatomic, copy) NSString *amount;

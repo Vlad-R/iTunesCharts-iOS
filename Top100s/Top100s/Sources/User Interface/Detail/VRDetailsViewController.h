@@ -8,10 +8,10 @@
 
 @import UIKit;
 
-@class VREntry;
+@class VREntryAdapter;
 
 @interface VRDetailsViewController : UIViewController
 
-@property (nonatomic, strong) VREntry *entry;
+@property (nonatomic, strong) VREntryAdapter *model;
 
 @end

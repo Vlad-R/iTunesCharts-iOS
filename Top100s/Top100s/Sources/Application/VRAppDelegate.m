@@ -11,16 +11,30 @@
 #import "VRListViewController.h"
 #import "VRMediaTypeListViewModel.h"
 
+@interface VRAppDelegate ()
+
+@property (nonatomic, readonly) UISplitViewController *splitViewController;
+@property (nonatomic, readonly) UINavigationController *masterNavigationController;
+
+@end
+
 @implementation VRAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    UISplitViewController *splitVC = (UISplitViewController *)self.window.rootViewController;
-    UINavigationController *masterNavigationController = (UINavigationController *)splitVC.viewControllers[0];
-    
-    VRListViewController *mediaTypeListVC = (VRListViewController *)masterNavigationController.topViewController;
+    VRListViewController *mediaTypeListVC = (VRListViewController *)self.masterNavigationController.topViewController;
     mediaTypeListVC.viewModel = [[VRMediaTypeListViewModel alloc] init];
     
     return YES;
+}
+
+#pragma mark - Accessors
+
+- (UISplitViewController *)splitViewController {
+    return (UISplitViewController *)self.window.rootViewController;
+}
+
+- (UINavigationController *)masterNavigationController {
+    return (UINavigationController *)self.splitViewController.viewControllers[0];
 }
 
 @end

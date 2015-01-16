@@ -11,9 +11,8 @@
 #import "UIView+Activity.h"
 #import "VRApps.h"
 #import "VRDetailsViewController.h"
-#import "VREntry.h"
+#import "VREntryAdapter.h"
 #import "VRMediaTableViewCell.h"
-#import "VRMediaViewModel.h"
 
 static NSString *kMediaCellID = @"media_cell_id";
 
@@ -41,23 +40,23 @@ static NSString *kMediaCellID = @"media_cell_id";
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     UINavigationController *navController = segue.destinationViewController;
     id vc = navController.topViewController;
-    if ([vc respondsToSelector:@selector(setEntry:)]) {
-        [vc setEntry:sender];
+    if ([vc respondsToSelector:@selector(setModel:)]) {
+        [vc setModel:sender];
     }
 }
 
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.viewModel.model.entries.count;
+    return [[self.viewModel.model entries] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    VREntry *entry = self.viewModel.model.entries[indexPath.row];
+    VREntryAdapter *adapter = [VREntryAdapter adapterFromObject:[self.viewModel.model entries][indexPath.row]];
     
     VRMediaTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kMediaCellID];
     cell.orderNumber = indexPath.row + 1;
-    cell.entry = entry;
+    cell.model = adapter;
     
     return cell;
 }
@@ -67,9 +66,9 @@ static NSString *kMediaCellID = @"media_cell_id";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    VREntry *entry = self.viewModel.model.entries[indexPath.row];
+    VREntryAdapter *adapter = [VREntryAdapter adapterFromObject:[self.viewModel.model entries][indexPath.row]];
     
-    [self performSegueWithIdentifier:@"showDetails" sender:entry];
+    [self performSegueWithIdentifier:@"showDetails" sender:adapter];
 }
 
 @end

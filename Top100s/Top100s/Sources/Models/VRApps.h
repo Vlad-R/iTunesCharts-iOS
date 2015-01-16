@@ -23,3 +23,11 @@
 
 @interface VRPaidMobileAppsRequest : VRAppsRequest
 @end
+
+
+@interface VRFreeMacAppsRequest : VRAppsRequest
+@end
+
+
+@interface VRPaidMacAppsRequest : VRAppsRequest
+@end

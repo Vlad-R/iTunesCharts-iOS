@@ -8,13 +8,13 @@
 
 #import "VRApps.h"
 
-#import "VREntry.h"
+#import "VRAppEntry.h"
 
 
 @implementation VRApps
 
 - (NSDictionary *)transformablePropertyMap {
-	return @{ transform(entries, VREntry) };
+	return @{ transform(entries, VRAppEntry) };
 }
 
 @end
@@ -42,6 +42,24 @@
 
 - (NSString *)endpoint {
 	return @"/toppaidapplications";
+}
+
+@end
+
+
+@implementation VRFreeMacAppsRequest
+
+- (NSString *)endpoint {
+    return @"/topfreemacapps";
+}
+
+@end
+
+
+@implementation VRPaidMacAppsRequest
+
+- (NSString *)endpoint {
+    return @"/toppaidmacapps";
 }
 
 @end

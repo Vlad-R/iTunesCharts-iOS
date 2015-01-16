@@ -8,7 +8,7 @@
 
 #import "VRCacheManager.h"
 
-static const NSTimeInterval kItemLifeSpan = 2.0 * 60 * 24; //2 days
+static const NSTimeInterval kItemLifeSpan = 2.0 * 60 * 60 * 24; //2 days
 
 @implementation VRCacheManager
 

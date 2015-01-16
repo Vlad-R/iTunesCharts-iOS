@@ -8,7 +8,7 @@
 
 #import "VRDetailsViewController.h"
 
-#import "VREntry.h"
+#import "VREntryAdapter.h"
 #import "VRIcon.h"
 #import "VRImageView.h"
 #import "VRPrice.h"
@@ -29,22 +29,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = self.entry.name;
+    self.title = self.model.name;
     self.navigationItem.leftBarButtonItem = self.navigationController.splitViewController.displayModeButtonItem;
     self.navigationItem.leftItemsSupplementBackButton = YES;
     
-    [self.imageView loadImageFromURL:[(VRIcon *)self.entry.icons[2] URL]];
-    self.nameLabel.text = self.entry.name;
-    self.developerLabel.text = self.entry.artist;
-    self.categoryLabel.text = self.entry.category;
-    [self.buyButton setTitle:self.entry.price.label forState:UIControlStateNormal];
-    self.summaryTextView.text = self.entry.summary;
+    [self.imageView loadImageFromURL:[(VRIcon *)self.model.icons[2] URL]];
+    self.nameLabel.text = self.model.name;
+    self.developerLabel.text = self.model.artist;
+    self.categoryLabel.text = self.model.category;
+    [self.buyButton setTitle:self.model.price forState:UIControlStateNormal];
+    self.summaryTextView.text = self.model.summary;
 }
 
 #pragma mark - Actions
 
 - (IBAction)buyButtonTapped:(id)sender {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:self.entry.link]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:self.model.link]];
 }
 
 @end

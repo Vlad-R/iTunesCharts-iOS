@@ -8,13 +8,13 @@
 
 #import "VRBooks.h"
 
-#import "VREntry.h"
+#import "VRBookEntry.h"
 
 
 @implementation VRBooks
 
 - (NSDictionary *)transformablePropertyMap {
-    return @{ transform(entries, VREntry) };
+    return @{ transform(entries, VRBookEntry) };
 }
 
 @end

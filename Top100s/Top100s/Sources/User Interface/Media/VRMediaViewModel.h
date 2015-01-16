@@ -6,13 +6,11 @@
 //  Copyright (c) 2014 Vlad-R. All rights reserved.
 //
 
-@import Foundation;
+@import UIKit;
 
-@class VRApps;
+@protocol VRMediaViewModel <NSObject>
 
-@interface VRMediaViewModel : NSObject
-
-@property (nonatomic, strong) VRApps *model;
+@property (nonatomic, strong) id model;
 
 - (void)fetchModel:(void(^)())completion;
 

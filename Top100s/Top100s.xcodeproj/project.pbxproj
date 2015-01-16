@@ -10,15 +10,16 @@
 		180648081A010AA400C1AE59 /* VRList.m in Sources */ = {isa = PBXBuildFile; fileRef = 180648071A010AA400C1AE59 /* VRList.m */; };
 		1806480E1A0113A900C1AE59 /* VRApps.m in Sources */ = {isa = PBXBuildFile; fileRef = 1806480D1A0113A900C1AE59 /* VRApps.m */; };
 		1847B22A19F68287001104C2 /* VRCommunicationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1847B22919F68287001104C2 /* VRCommunicationManager.m */; };
-		184D9C4719FFA19F00BA0462 /* VRIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 184D9C4619FFA19F00BA0462 /* VRIcon.m */; };
-		184D9C4A19FFA45E00BA0462 /* VRPrice.m in Sources */ = {isa = PBXBuildFile; fileRef = 184D9C4919FFA45E00BA0462 /* VRPrice.m */; };
 		186DD9861A038CB5009D4315 /* UIView+Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = 186DD9851A038CB5009D4315 /* UIView+Activity.m */; };
 		186DD9891A03AEC3009D4315 /* UIColor+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 186DD9881A03AEC3009D4315 /* UIColor+Additions.m */; };
 		1883C66119F9215C004AA032 /* VRRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1883C66019F9215C004AA032 /* VRRequest.m */; };
 		1883C66519F92FA1004AA032 /* VRDataParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1883C66419F92FA1004AA032 /* VRDataParser.m */; };
-		18E198CB19FA880B00DEF9A4 /* VRModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E198CA19FA880B00DEF9A4 /* VRModel.m */; };
+		261E8CE81A215D9100A6D14E /* VRFreeBooksViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 261E8CE71A215D9100A6D14E /* VRFreeBooksViewModel.m */; };
+		261E8CEC1A2162E000A6D14E /* VRObjectAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 261E8CEB1A2162E000A6D14E /* VRObjectAdapter.m */; };
 		2622BFAC1A1939CE00F0D93E /* VRDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2622BFAB1A1939CE00F0D93E /* VRDetailsViewController.m */; };
-		2624746C19FC5E1700D78124 /* VREntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 2624746B19FC5E1700D78124 /* VREntry.m */; };
+		2639EFF21A687F1B00DF9FA3 /* VRFreeMobileAppsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2639EFF11A687F1B00DF9FA3 /* VRFreeMobileAppsViewModel.m */; };
+		2639EFF91A68817800DF9FA3 /* VRAppsFeedTypeListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2639EFF51A68817800DF9FA3 /* VRAppsFeedTypeListViewModel.m */; };
+		2639EFFA1A68817800DF9FA3 /* VRBooksFeedTypeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2639EFF81A68817800DF9FA3 /* VRBooksFeedTypeViewModel.m */; };
 		263BBC6619F3236E006C04D9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 263BBC5B19F3236E006C04D9 /* Images.xcassets */; };
 		263BBC6819F3236E006C04D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 263BBC5E19F3236E006C04D9 /* Main.storyboard */; };
 		263BBC6919F3236E006C04D9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 263BBC6119F3236E006C04D9 /* main.m */; };
@@ -26,19 +27,24 @@
 		263BBC6B19F3236E006C04D9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 263BBC6519F3236E006C04D9 /* LaunchScreen.xib */; };
 		266281761A18E39300863AC6 /* VRSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 266281751A18E39300863AC6 /* VRSplitViewController.m */; };
 		267920A71A154249003C28A8 /* VRCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 267920A61A154249003C28A8 /* VRCacheManager.m */; };
+		268064BD1A63330C00863984 /* VRAppEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 268064BC1A63330C00863984 /* VRAppEntry.m */; };
+		268064C01A63375000863984 /* VRBookEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 268064BF1A63375000863984 /* VRBookEntry.m */; };
+		268064C51A633C3B00863984 /* VRIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 268064C21A633C3B00863984 /* VRIcon.m */; };
+		268064C61A633C3B00863984 /* VRPrice.m in Sources */ = {isa = PBXBuildFile; fileRef = 268064C41A633C3B00863984 /* VRPrice.m */; };
 		268876D41A1FE16E00A6FD55 /* VRBooks.m in Sources */ = {isa = PBXBuildFile; fileRef = 268876D31A1FE16E00A6FD55 /* VRBooks.m */; };
 		2691C4AB1A0FA7C800763E57 /* VRListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2691C4AA1A0FA7C800763E57 /* VRListViewController.m */; };
 		2691C4AE1A0FA80C00763E57 /* VRListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2691C4AD1A0FA80C00763E57 /* VRListViewModel.m */; };
 		2691C4B11A0FAC6E00763E57 /* VRMediaTypeListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2691C4B01A0FAC6E00763E57 /* VRMediaTypeListViewModel.m */; };
-		2691C4B41A0FAD7F00763E57 /* VRAppsFeedTypeListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2691C4B31A0FAD7F00763E57 /* VRAppsFeedTypeListViewModel.m */; };
 		26B704D91A12A8E500DB2DB2 /* VRMediaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26B704D81A12A8E500DB2DB2 /* VRMediaViewController.m */; };
-		26B704DC1A12C40F00DB2DB2 /* VRMediaViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 26B704DB1A12C40F00DB2DB2 /* VRMediaViewModel.m */; };
 		26B704DF1A12C44900DB2DB2 /* VRMediaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26B704DE1A12C44900DB2DB2 /* VRMediaTableViewCell.m */; };
 		26C243721A05950C001CEFD1 /* SampleResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 26C243711A05950C001CEFD1 /* SampleResponse.json */; };
 		26C243751A0597AA001CEFD1 /* VRNetworkActivityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C243741A0597AA001CEFD1 /* VRNetworkActivityManager.m */; };
 		26D2E1691A162B4600A8DCA2 /* VRImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26D2E1681A162B4600A8DCA2 /* VRImageView.m */; };
 		26DECF2319F84FEE003BB9A1 /* NSMutableString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 26DECF2219F84FEE003BB9A1 /* NSMutableString+Additions.m */; };
 		26DECF2619F855D4003BB9A1 /* VRRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 26DECF2519F855D4003BB9A1 /* VRRequestManager.m */; };
+		26F6FE301A65D49E00DE0979 /* VREntryAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 26F6FE2F1A65D49E00DE0979 /* VREntryAdapter.m */; };
+		26F6FE331A65D50B00DE0979 /* VRAppEntryAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 26F6FE321A65D50B00DE0979 /* VRAppEntryAdapter.m */; };
+		26F6FE361A65D52500DE0979 /* VRBookEntryAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 26F6FE351A65D52500DE0979 /* VRBookEntryAdapter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,10 +54,6 @@
 		1806480D1A0113A900C1AE59 /* VRApps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRApps.m; sourceTree = "<group>"; };
 		1847B22819F68287001104C2 /* VRCommunicationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRCommunicationManager.h; sourceTree = "<group>"; };
 		1847B22919F68287001104C2 /* VRCommunicationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRCommunicationManager.m; sourceTree = "<group>"; };
-		184D9C4519FFA19F00BA0462 /* VRIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRIcon.h; sourceTree = "<group>"; };
-		184D9C4619FFA19F00BA0462 /* VRIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRIcon.m; sourceTree = "<group>"; };
-		184D9C4819FFA45E00BA0462 /* VRPrice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRPrice.h; sourceTree = "<group>"; };
-		184D9C4919FFA45E00BA0462 /* VRPrice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRPrice.m; sourceTree = "<group>"; };
 		184EAAEC19FE56490084FC05 /* VRMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRMacros.h; sourceTree = "<group>"; };
 		184EAAED19FE669D0084FC05 /* VRFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRFunctions.h; sourceTree = "<group>"; };
 		186DD9841A038CB5009D4315 /* UIView+Activity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Activity.h"; sourceTree = "<group>"; };
@@ -63,12 +65,19 @@
 		1883C66319F92FA1004AA032 /* VRDataParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRDataParser.h; sourceTree = "<group>"; };
 		1883C66419F92FA1004AA032 /* VRDataParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRDataParser.m; sourceTree = "<group>"; };
 		18E198C919FA880B00DEF9A4 /* VRModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRModel.h; sourceTree = "<group>"; };
-		18E198CA19FA880B00DEF9A4 /* VRModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRModel.m; sourceTree = "<group>"; };
 		18E198D019FA8DC800DEF9A4 /* prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = prefix.pch; sourceTree = "<group>"; };
+		261E8CE61A215D9100A6D14E /* VRFreeBooksViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRFreeBooksViewModel.h; sourceTree = "<group>"; };
+		261E8CE71A215D9100A6D14E /* VRFreeBooksViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRFreeBooksViewModel.m; sourceTree = "<group>"; };
+		261E8CEA1A2162E000A6D14E /* VRObjectAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRObjectAdapter.h; sourceTree = "<group>"; };
+		261E8CEB1A2162E000A6D14E /* VRObjectAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRObjectAdapter.m; sourceTree = "<group>"; };
 		2622BFAA1A1939CE00F0D93E /* VRDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRDetailsViewController.h; sourceTree = "<group>"; };
 		2622BFAB1A1939CE00F0D93E /* VRDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRDetailsViewController.m; sourceTree = "<group>"; };
-		2624746A19FC5E1700D78124 /* VREntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VREntry.h; sourceTree = "<group>"; };
-		2624746B19FC5E1700D78124 /* VREntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VREntry.m; sourceTree = "<group>"; };
+		2639EFF01A687F1B00DF9FA3 /* VRFreeMobileAppsViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRFreeMobileAppsViewModel.h; sourceTree = "<group>"; };
+		2639EFF11A687F1B00DF9FA3 /* VRFreeMobileAppsViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRFreeMobileAppsViewModel.m; sourceTree = "<group>"; };
+		2639EFF41A68817800DF9FA3 /* VRAppsFeedTypeListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRAppsFeedTypeListViewModel.h; sourceTree = "<group>"; };
+		2639EFF51A68817800DF9FA3 /* VRAppsFeedTypeListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRAppsFeedTypeListViewModel.m; sourceTree = "<group>"; };
+		2639EFF71A68817800DF9FA3 /* VRBooksFeedTypeViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRBooksFeedTypeViewModel.h; sourceTree = "<group>"; };
+		2639EFF81A68817800DF9FA3 /* VRBooksFeedTypeViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRBooksFeedTypeViewModel.m; sourceTree = "<group>"; };
 		263BBC3019F31F3D006C04D9 /* Top100s.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Top100s.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		263BBC5B19F3236E006C04D9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		263BBC5C19F3236E006C04D9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -81,6 +90,14 @@
 		266281751A18E39300863AC6 /* VRSplitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRSplitViewController.m; sourceTree = "<group>"; };
 		267920A51A154249003C28A8 /* VRCacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRCacheManager.h; sourceTree = "<group>"; };
 		267920A61A154249003C28A8 /* VRCacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRCacheManager.m; sourceTree = "<group>"; };
+		268064BB1A63330C00863984 /* VRAppEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRAppEntry.h; sourceTree = "<group>"; };
+		268064BC1A63330C00863984 /* VRAppEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRAppEntry.m; sourceTree = "<group>"; };
+		268064BE1A63375000863984 /* VRBookEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRBookEntry.h; sourceTree = "<group>"; };
+		268064BF1A63375000863984 /* VRBookEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRBookEntry.m; sourceTree = "<group>"; };
+		268064C11A633C3B00863984 /* VRIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRIcon.h; sourceTree = "<group>"; };
+		268064C21A633C3B00863984 /* VRIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRIcon.m; sourceTree = "<group>"; };
+		268064C31A633C3B00863984 /* VRPrice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRPrice.h; sourceTree = "<group>"; };
+		268064C41A633C3B00863984 /* VRPrice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRPrice.m; sourceTree = "<group>"; };
 		268876D21A1FE16E00A6FD55 /* VRBooks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRBooks.h; sourceTree = "<group>"; };
 		268876D31A1FE16E00A6FD55 /* VRBooks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRBooks.m; sourceTree = "<group>"; };
 		2691C4A91A0FA7C800763E57 /* VRListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRListViewController.h; sourceTree = "<group>"; };
@@ -89,12 +106,9 @@
 		2691C4AD1A0FA80C00763E57 /* VRListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRListViewModel.m; sourceTree = "<group>"; };
 		2691C4AF1A0FAC6E00763E57 /* VRMediaTypeListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRMediaTypeListViewModel.h; sourceTree = "<group>"; };
 		2691C4B01A0FAC6E00763E57 /* VRMediaTypeListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRMediaTypeListViewModel.m; sourceTree = "<group>"; };
-		2691C4B21A0FAD7F00763E57 /* VRAppsFeedTypeListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRAppsFeedTypeListViewModel.h; sourceTree = "<group>"; };
-		2691C4B31A0FAD7F00763E57 /* VRAppsFeedTypeListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRAppsFeedTypeListViewModel.m; sourceTree = "<group>"; };
 		26B704D71A12A8E500DB2DB2 /* VRMediaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRMediaViewController.h; sourceTree = "<group>"; };
 		26B704D81A12A8E500DB2DB2 /* VRMediaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRMediaViewController.m; sourceTree = "<group>"; };
 		26B704DA1A12C40F00DB2DB2 /* VRMediaViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRMediaViewModel.h; sourceTree = "<group>"; };
-		26B704DB1A12C40F00DB2DB2 /* VRMediaViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRMediaViewModel.m; sourceTree = "<group>"; };
 		26B704DD1A12C44900DB2DB2 /* VRMediaTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRMediaTableViewCell.h; sourceTree = "<group>"; };
 		26B704DE1A12C44900DB2DB2 /* VRMediaTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRMediaTableViewCell.m; sourceTree = "<group>"; };
 		26C243711A05950C001CEFD1 /* SampleResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SampleResponse.json; sourceTree = "<group>"; };
@@ -106,6 +120,12 @@
 		26DECF2219F84FEE003BB9A1 /* NSMutableString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableString+Additions.m"; sourceTree = "<group>"; };
 		26DECF2419F855D4003BB9A1 /* VRRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRRequestManager.h; sourceTree = "<group>"; };
 		26DECF2519F855D4003BB9A1 /* VRRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRRequestManager.m; sourceTree = "<group>"; };
+		26F6FE2E1A65D49E00DE0979 /* VREntryAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VREntryAdapter.h; sourceTree = "<group>"; };
+		26F6FE2F1A65D49E00DE0979 /* VREntryAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VREntryAdapter.m; sourceTree = "<group>"; };
+		26F6FE311A65D50B00DE0979 /* VRAppEntryAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRAppEntryAdapter.h; sourceTree = "<group>"; };
+		26F6FE321A65D50B00DE0979 /* VRAppEntryAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRAppEntryAdapter.m; sourceTree = "<group>"; };
+		26F6FE341A65D52500DE0979 /* VRBookEntryAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRBookEntryAdapter.h; sourceTree = "<group>"; };
+		26F6FE351A65D52500DE0979 /* VRBookEntryAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRBookEntryAdapter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,20 +157,14 @@
 		1847B22B19F68923001104C2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				268064BA1A6332C600863984 /* Entries */,
 				18E198C919FA880B00DEF9A4 /* VRModel.h */,
-				18E198CA19FA880B00DEF9A4 /* VRModel.m */,
 				180648061A010AA400C1AE59 /* VRList.h */,
 				180648071A010AA400C1AE59 /* VRList.m */,
 				1806480C1A0113A900C1AE59 /* VRApps.h */,
 				1806480D1A0113A900C1AE59 /* VRApps.m */,
 				268876D21A1FE16E00A6FD55 /* VRBooks.h */,
 				268876D31A1FE16E00A6FD55 /* VRBooks.m */,
-				2624746A19FC5E1700D78124 /* VREntry.h */,
-				2624746B19FC5E1700D78124 /* VREntry.m */,
-				184D9C4519FFA19F00BA0462 /* VRIcon.h */,
-				184D9C4619FFA19F00BA0462 /* VRIcon.m */,
-				184D9C4819FFA45E00BA0462 /* VRPrice.h */,
-				184D9C4919FFA45E00BA0462 /* VRPrice.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -177,6 +191,30 @@
 			path = "Data Handling";
 			sourceTree = "<group>";
 		};
+		261E8CE51A215D2500A6D14E /* Books */ = {
+			isa = PBXGroup;
+			children = (
+				261E8CE61A215D9100A6D14E /* VRFreeBooksViewModel.h */,
+				261E8CE71A215D9100A6D14E /* VRFreeBooksViewModel.m */,
+			);
+			path = Books;
+			sourceTree = "<group>";
+		};
+		261E8CE91A21627A00A6D14E /* Adapters */ = {
+			isa = PBXGroup;
+			children = (
+				261E8CEA1A2162E000A6D14E /* VRObjectAdapter.h */,
+				261E8CEB1A2162E000A6D14E /* VRObjectAdapter.m */,
+				26F6FE2E1A65D49E00DE0979 /* VREntryAdapter.h */,
+				26F6FE2F1A65D49E00DE0979 /* VREntryAdapter.m */,
+				26F6FE311A65D50B00DE0979 /* VRAppEntryAdapter.h */,
+				26F6FE321A65D50B00DE0979 /* VRAppEntryAdapter.m */,
+				26F6FE341A65D52500DE0979 /* VRBookEntryAdapter.h */,
+				26F6FE351A65D52500DE0979 /* VRBookEntryAdapter.m */,
+			);
+			path = Adapters;
+			sourceTree = "<group>";
+		};
 		2622BFA91A19399B00F0D93E /* Detail */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +222,33 @@
 				2622BFAB1A1939CE00F0D93E /* VRDetailsViewController.m */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		2639EFEC1A687E2C00DF9FA3 /* Apps */ = {
+			isa = PBXGroup;
+			children = (
+				2639EFF01A687F1B00DF9FA3 /* VRFreeMobileAppsViewModel.h */,
+				2639EFF11A687F1B00DF9FA3 /* VRFreeMobileAppsViewModel.m */,
+			);
+			path = Apps;
+			sourceTree = "<group>";
+		};
+		2639EFF31A68817800DF9FA3 /* Apps */ = {
+			isa = PBXGroup;
+			children = (
+				2639EFF41A68817800DF9FA3 /* VRAppsFeedTypeListViewModel.h */,
+				2639EFF51A68817800DF9FA3 /* VRAppsFeedTypeListViewModel.m */,
+			);
+			path = Apps;
+			sourceTree = "<group>";
+		};
+		2639EFF61A68817800DF9FA3 /* Books */ = {
+			isa = PBXGroup;
+			children = (
+				2639EFF71A68817800DF9FA3 /* VRBooksFeedTypeViewModel.h */,
+				2639EFF81A68817800DF9FA3 /* VRBooksFeedTypeViewModel.m */,
+			);
+			path = Books;
 			sourceTree = "<group>";
 		};
 		263BBC2719F31F3D006C04D9 = {
@@ -236,6 +301,7 @@
 				263BBC6019F3236E006C04D9 /* Application */,
 				1883C66219F92F18004AA032 /* Data Handling */,
 				1847B22719F6821E001104C2 /* Network */,
+				261E8CE91A21627A00A6D14E /* Adapters */,
 				1847B22B19F68923001104C2 /* Models */,
 				26DECF1719F848A5003BB9A1 /* Utils */,
 				263BBC6419F3236E006C04D9 /* User Interface */,
@@ -267,17 +333,32 @@
 			path = "User Interface";
 			sourceTree = "<group>";
 		};
+		268064BA1A6332C600863984 /* Entries */ = {
+			isa = PBXGroup;
+			children = (
+				268064BB1A63330C00863984 /* VRAppEntry.h */,
+				268064BC1A63330C00863984 /* VRAppEntry.m */,
+				268064BE1A63375000863984 /* VRBookEntry.h */,
+				268064BF1A63375000863984 /* VRBookEntry.m */,
+				268064C11A633C3B00863984 /* VRIcon.h */,
+				268064C21A633C3B00863984 /* VRIcon.m */,
+				268064C31A633C3B00863984 /* VRPrice.h */,
+				268064C41A633C3B00863984 /* VRPrice.m */,
+			);
+			path = Entries;
+			sourceTree = "<group>";
+		};
 		2691C4A81A0FA7C800763E57 /* Lists */ = {
 			isa = PBXGroup;
 			children = (
+				2639EFF31A68817800DF9FA3 /* Apps */,
+				2639EFF61A68817800DF9FA3 /* Books */,
 				2691C4A91A0FA7C800763E57 /* VRListViewController.h */,
 				2691C4AA1A0FA7C800763E57 /* VRListViewController.m */,
 				2691C4AC1A0FA80C00763E57 /* VRListViewModel.h */,
 				2691C4AD1A0FA80C00763E57 /* VRListViewModel.m */,
 				2691C4AF1A0FAC6E00763E57 /* VRMediaTypeListViewModel.h */,
 				2691C4B01A0FAC6E00763E57 /* VRMediaTypeListViewModel.m */,
-				2691C4B21A0FAD7F00763E57 /* VRAppsFeedTypeListViewModel.h */,
-				2691C4B31A0FAD7F00763E57 /* VRAppsFeedTypeListViewModel.m */,
 			);
 			path = Lists;
 			sourceTree = "<group>";
@@ -296,10 +377,11 @@
 			children = (
 				26B704D71A12A8E500DB2DB2 /* VRMediaViewController.h */,
 				26B704D81A12A8E500DB2DB2 /* VRMediaViewController.m */,
-				26B704DA1A12C40F00DB2DB2 /* VRMediaViewModel.h */,
-				26B704DB1A12C40F00DB2DB2 /* VRMediaViewModel.m */,
 				26B704DD1A12C44900DB2DB2 /* VRMediaTableViewCell.h */,
 				26B704DE1A12C44900DB2DB2 /* VRMediaTableViewCell.m */,
+				26B704DA1A12C40F00DB2DB2 /* VRMediaViewModel.h */,
+				2639EFEC1A687E2C00DF9FA3 /* Apps */,
+				261E8CE51A215D2500A6D14E /* Books */,
 			);
 			path = Media;
 			sourceTree = "<group>";
@@ -398,32 +480,38 @@
 			files = (
 				2691C4AB1A0FA7C800763E57 /* VRListViewController.m in Sources */,
 				1883C66519F92FA1004AA032 /* VRDataParser.m in Sources */,
+				268064BD1A63330C00863984 /* VRAppEntry.m in Sources */,
 				180648081A010AA400C1AE59 /* VRList.m in Sources */,
-				18E198CB19FA880B00DEF9A4 /* VRModel.m in Sources */,
+				268064C61A633C3B00863984 /* VRPrice.m in Sources */,
 				26D2E1691A162B4600A8DCA2 /* VRImageView.m in Sources */,
+				268064C51A633C3B00863984 /* VRIcon.m in Sources */,
 				1883C66119F9215C004AA032 /* VRRequest.m in Sources */,
+				26F6FE361A65D52500DE0979 /* VRBookEntryAdapter.m in Sources */,
 				186DD9861A038CB5009D4315 /* UIView+Activity.m in Sources */,
 				266281761A18E39300863AC6 /* VRSplitViewController.m in Sources */,
+				26F6FE331A65D50B00DE0979 /* VRAppEntryAdapter.m in Sources */,
 				26DECF2319F84FEE003BB9A1 /* NSMutableString+Additions.m in Sources */,
-				2624746C19FC5E1700D78124 /* VREntry.m in Sources */,
+				261E8CEC1A2162E000A6D14E /* VRObjectAdapter.m in Sources */,
 				268876D41A1FE16E00A6FD55 /* VRBooks.m in Sources */,
 				26B704D91A12A8E500DB2DB2 /* VRMediaViewController.m in Sources */,
+				268064C01A63375000863984 /* VRBookEntry.m in Sources */,
+				2639EFFA1A68817800DF9FA3 /* VRBooksFeedTypeViewModel.m in Sources */,
 				1806480E1A0113A900C1AE59 /* VRApps.m in Sources */,
-				184D9C4719FFA19F00BA0462 /* VRIcon.m in Sources */,
 				2691C4AE1A0FA80C00763E57 /* VRListViewModel.m in Sources */,
 				186DD9891A03AEC3009D4315 /* UIColor+Additions.m in Sources */,
+				26F6FE301A65D49E00DE0979 /* VREntryAdapter.m in Sources */,
 				1847B22A19F68287001104C2 /* VRCommunicationManager.m in Sources */,
 				2622BFAC1A1939CE00F0D93E /* VRDetailsViewController.m in Sources */,
 				26DECF2619F855D4003BB9A1 /* VRRequestManager.m in Sources */,
 				263BBC6A19F3236E006C04D9 /* VRAppDelegate.m in Sources */,
-				26B704DC1A12C40F00DB2DB2 /* VRMediaViewModel.m in Sources */,
 				26B704DF1A12C44900DB2DB2 /* VRMediaTableViewCell.m in Sources */,
+				2639EFF91A68817800DF9FA3 /* VRAppsFeedTypeListViewModel.m in Sources */,
 				267920A71A154249003C28A8 /* VRCacheManager.m in Sources */,
+				2639EFF21A687F1B00DF9FA3 /* VRFreeMobileAppsViewModel.m in Sources */,
 				26C243751A0597AA001CEFD1 /* VRNetworkActivityManager.m in Sources */,
-				2691C4B41A0FAD7F00763E57 /* VRAppsFeedTypeListViewModel.m in Sources */,
 				2691C4B11A0FAC6E00763E57 /* VRMediaTypeListViewModel.m in Sources */,
 				263BBC6919F3236E006C04D9 /* main.m in Sources */,
-				184D9C4A19FFA45E00BA0462 /* VRPrice.m in Sources */,
+				261E8CE81A215D9100A6D14E /* VRFreeBooksViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

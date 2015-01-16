@@ -53,20 +53,6 @@
 
 #pragma mark - Public
 
-- (NSURLSessionTask *)freeMobileAppsWithLimit:(NSUInteger)limit completion:(void(^)(VRApps *, NSError *))block {
-	VRFreeMobileAppsRequest *req = [[VRFreeMobileAppsRequest alloc] init];
-	req.limit = [NSString stringWithFormat:@"%lu", limit];
-	
-	return [self dataTaskWithRequest:req completion:block];
-}
-
-- (NSURLSessionTask *)paidMobileAppsWithLimit:(NSUInteger)limit completion:(void (^)(VRApps *, NSError *))block {
-	VRPaidMobileAppsRequest *req = [[VRPaidMobileAppsRequest alloc] init];
-	req.limit = [NSString stringWithFormat:@"%lu", limit];
-	
-	return [self dataTaskWithRequest:req completion:block];
-}
-
 - (NSURLSessionTask *)freeBooksWithLimit:(NSUInteger)limit completion:(void (^)(VRBooks *, NSError *))block {
     VRFreeBooksRequest *req = [[VRFreeBooksRequest alloc] init];
     req.limit = [NSString stringWithFormat:@"%lu", limit];
@@ -83,6 +69,34 @@
 
 - (NSURLSessionTask *)textbooksWithLimit:(NSUInteger)limit completion:(void (^)(VRBooks *, NSError *))block {
     VRTextbooksRequest *req = [[VRTextbooksRequest alloc] init];
+    req.limit = [NSString stringWithFormat:@"%lu", limit];
+    
+    return [self dataTaskWithRequest:req completion:block];
+}
+
+- (NSURLSessionTask *)freeMobileAppsWithLimit:(NSUInteger)limit completion:(void(^)(VRApps *, NSError *))block {
+    VRFreeMobileAppsRequest *req = [[VRFreeMobileAppsRequest alloc] init];
+    req.limit = [NSString stringWithFormat:@"%lu", limit];
+    
+    return [self dataTaskWithRequest:req completion:block];
+}
+
+- (NSURLSessionTask *)paidMobileAppsWithLimit:(NSUInteger)limit completion:(void (^)(VRApps *, NSError *))block {
+    VRPaidMobileAppsRequest *req = [[VRPaidMobileAppsRequest alloc] init];
+    req.limit = [NSString stringWithFormat:@"%lu", limit];
+    
+    return [self dataTaskWithRequest:req completion:block];
+}
+
+- (NSURLSessionTask *)freeMacAppsWithLimit:(NSUInteger)limit completion:(void(^)(VRApps *, NSError *))block {
+    VRFreeMacAppsRequest *req = [[VRFreeMacAppsRequest alloc] init];
+    req.limit = [NSString stringWithFormat:@"%lu", limit];
+    
+    return [self dataTaskWithRequest:req completion:block];
+}
+
+- (NSURLSessionTask *)paidMacAppsWithLimit:(NSUInteger)limit completion:(void (^)(VRApps *, NSError *))block {
+    VRPaidMacAppsRequest *req = [[VRPaidMacAppsRequest alloc] init];
     req.limit = [NSString stringWithFormat:@"%lu", limit];
     
     return [self dataTaskWithRequest:req completion:block];
