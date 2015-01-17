@@ -1,30 +1,31 @@
 //
-//  VRBooksFeedTypeViewModel.m
+//  VRBooksFeedTypeListViewModel.m
 //  Top100s
 //
-//  Created by Vlad-R on 22/11/14.
-//  Copyright (c) 2014 Vlad-R. All rights reserved.
+//  Created by Vlad-R on 17/01/15.
+//  Copyright (c) 2015 Vlad-R. All rights reserved.
 //
 
-#import "VRBooksFeedTypeViewModel.h"
+#import "VRBooksFeedTypeListViewModel.h"
 
 #import "VRFreeBooksViewModel.h"
+#import "VRPaidBooksViewModel.h"
+#import "VRTextbooksViewModel.h"
 
 static const NSString *kTopFreeBooks = @"Top Free Books";
 static const NSString *kTopPaidBooks = @"Top Paid Books";
 static const NSString *kTopTextbooks = @"Top Textbooks";
 
-@implementation VRBooksFeedTypeViewModel
+@implementation VRBooksFeedTypeListViewModel
 
 - (NSArray *)list {
     return @[ kTopFreeBooks, kTopPaidBooks, kTopTextbooks ];
 }
 
 - (NSDictionary *)viewModelMap {
-    //TODO: handle independent cases
     return @{ ClassMap(kTopFreeBooks, VRFreeBooksViewModel),
-              ClassMap(kTopPaidBooks, VRFreeBooksViewModel),
-              ClassMap(kTopTextbooks, VRFreeBooksViewModel) };
+              ClassMap(kTopPaidBooks, VRPaidBooksViewModel),
+              ClassMap(kTopTextbooks, VRTextbooksViewModel) };
 }
 
 @end

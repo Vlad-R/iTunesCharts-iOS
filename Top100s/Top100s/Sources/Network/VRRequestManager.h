@@ -12,6 +12,6 @@
 
 @interface VRRequestManager : NSObject
 
-+ (NSURLRequest *)URLRequest:(VRRequest *)request;
++ (NSURLRequest *)foundationRequestFromRequest:(VRRequest *)request;
 
 @end

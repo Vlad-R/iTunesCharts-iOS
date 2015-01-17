@@ -15,7 +15,7 @@
 
 #pragma mark - Public
 
-+ (NSURLRequest *)URLRequest:(VRRequest *)request {
++ (NSURLRequest *)foundationRequestFromRequest:(VRRequest *)request {
     NSMutableURLRequest *urlRequest = [[NSMutableURLRequest alloc] init];
     
     NSString *url = [NSString stringWithFormat:@"%@%@", [request host], [request endpoint]];

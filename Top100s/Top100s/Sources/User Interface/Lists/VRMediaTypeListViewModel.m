@@ -8,8 +8,9 @@
 
 #import "VRMediaTypeListViewModel.h"
 
-#import "VRAppsFeedTypeListViewModel.h"
-#import "VRBooksFeedTypeViewModel.h"
+#import "VRBooksFeedTypeListViewModel.h"
+#import "VRMacAppsFeedTypeListViewModel.h"
+#import "VRMobileAppsFeedTypeListViewModel.h"
 
 static const NSString *kBooks = @"Books";
 static const NSString *kiOSApps = @"iOS Apps";
@@ -22,10 +23,9 @@ static const NSString *kMacApps = @"Mac Apps";
 }
 
 - (NSDictionary *)viewModelMap {
-    return @{ ClassMap(kBooks, VRBooksFeedTypeViewModel),
-              //TODO: Separate
-              ClassMap(kiOSApps, VRAppsFeedTypeListViewModel),
-              ClassMap(kMacApps, VRAppsFeedTypeListViewModel) };
+    return @{ ClassMap(kBooks, VRBooksFeedTypeListViewModel),
+              ClassMap(kiOSApps, VRMobileAppsFeedTypeListViewModel),
+              ClassMap(kMacApps, VRMacAppsFeedTypeListViewModel) };
 }
 
 @end

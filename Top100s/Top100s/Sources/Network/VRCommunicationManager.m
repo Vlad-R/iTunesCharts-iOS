@@ -124,7 +124,7 @@
 		return nil;
 	}
 	
-	NSURLRequest *req = [VRRequestManager URLRequest:request];
+	NSURLRequest *req = [VRRequestManager foundationRequestFromRequest:request];
 	NSURLSessionDataTask *task = [self.session dataTaskWithRequest:req
 												 completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
 													 if (error) {
