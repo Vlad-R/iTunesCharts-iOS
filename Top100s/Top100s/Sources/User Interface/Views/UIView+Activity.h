@@ -8,16 +8,8 @@
 
 @import UIKit;
 
-@class VRActivityView;
-
-
 @interface UIView (Activity)
 
 @property (nonatomic, assign) BOOL activityViewVisible;
-
-@end
-
-
-@interface VRActivityView : UIView
 
 @end

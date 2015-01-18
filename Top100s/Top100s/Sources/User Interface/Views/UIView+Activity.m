@@ -10,14 +10,18 @@
 
 #import "UIView+Activity.h"
 
-
 static char kActivityViewKey;
 
-@interface UIView (Activity_Private)
 
-@property (nonatomic, strong) VRActivityView *activityView;
-
+@interface VRActivityView : UIView
+@property (nonatomic, strong) UIActivityIndicatorView *spinner;
+@property (nonatomic, strong) NSMutableArray *layoutConstraints;
 @end
+
+@interface UIView (Activity_Private)
+@property (nonatomic, strong) VRActivityView *activityView;
+@end
+
 
 @implementation UIView (Activity_Private)
 
@@ -30,6 +34,7 @@ static char kActivityViewKey;
 }
 
 @end
+
 
 @implementation UIView (Activity)
 
@@ -54,13 +59,6 @@ static char kActivityViewKey;
 
 @end
 
-
-@interface VRActivityView ()
-
-@property (nonatomic, strong) UIActivityIndicatorView *spinner;
-@property (nonatomic, strong) NSMutableArray *layoutConstraints;
-
-@end
 
 @implementation VRActivityView
 

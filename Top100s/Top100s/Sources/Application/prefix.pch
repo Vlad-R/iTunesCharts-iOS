@@ -16,6 +16,7 @@
 #include "VRFunctions.h"
 #include "VRMacros.h"
 
+#import "NSObject+UUID.h"
 #import "UIColor+Additions.h"
 
 

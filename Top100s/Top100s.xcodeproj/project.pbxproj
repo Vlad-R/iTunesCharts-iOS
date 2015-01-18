@@ -14,6 +14,7 @@
 		186DD9891A03AEC3009D4315 /* UIColor+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 186DD9881A03AEC3009D4315 /* UIColor+Additions.m */; };
 		1883C66119F9215C004AA032 /* VRRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1883C66019F9215C004AA032 /* VRRequest.m */; };
 		1883C66519F92FA1004AA032 /* VRDataParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1883C66419F92FA1004AA032 /* VRDataParser.m */; };
+		26039C501A6B2A8700F2F892 /* NSObject+UUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 26039C4F1A6B2A8700F2F892 /* NSObject+UUID.m */; };
 		261E8CE81A215D9100A6D14E /* VRFreeBooksViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 261E8CE71A215D9100A6D14E /* VRFreeBooksViewModel.m */; };
 		261E8CEC1A2162E000A6D14E /* VRObjectAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 261E8CEB1A2162E000A6D14E /* VRObjectAdapter.m */; };
 		2622BFAC1A1939CE00F0D93E /* VRDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2622BFAB1A1939CE00F0D93E /* VRDetailsViewController.m */; };
@@ -72,6 +73,8 @@
 		1883C66419F92FA1004AA032 /* VRDataParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRDataParser.m; sourceTree = "<group>"; };
 		18E198C919FA880B00DEF9A4 /* VRModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRModel.h; sourceTree = "<group>"; };
 		18E198D019FA8DC800DEF9A4 /* prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = prefix.pch; sourceTree = "<group>"; };
+		26039C4E1A6B2A8700F2F892 /* NSObject+UUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+UUID.h"; sourceTree = "<group>"; };
+		26039C4F1A6B2A8700F2F892 /* NSObject+UUID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+UUID.m"; sourceTree = "<group>"; };
 		261E8CE61A215D9100A6D14E /* VRFreeBooksViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRFreeBooksViewModel.h; sourceTree = "<group>"; };
 		261E8CE71A215D9100A6D14E /* VRFreeBooksViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRFreeBooksViewModel.m; sourceTree = "<group>"; };
 		261E8CEA1A2162E000A6D14E /* VRObjectAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRObjectAdapter.h; sourceTree = "<group>"; };
@@ -433,6 +436,8 @@
 				26DECF2219F84FEE003BB9A1 /* NSMutableString+Additions.m */,
 				186DD9871A03AEC3009D4315 /* UIColor+Additions.h */,
 				186DD9881A03AEC3009D4315 /* UIColor+Additions.m */,
+				26039C4E1A6B2A8700F2F892 /* NSObject+UUID.h */,
+				26039C4F1A6B2A8700F2F892 /* NSObject+UUID.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -536,6 +541,7 @@
 				26F6FE301A65D49E00DE0979 /* VREntryAdapter.m in Sources */,
 				1847B22A19F68287001104C2 /* VRCommunicationManager.m in Sources */,
 				2622BFAC1A1939CE00F0D93E /* VRDetailsViewController.m in Sources */,
+				26039C501A6B2A8700F2F892 /* NSObject+UUID.m in Sources */,
 				2665F6171A6AB33600FD7AA5 /* VRPaidMobileAppsViewModel.m in Sources */,
 				26DECF2619F855D4003BB9A1 /* VRRequestManager.m in Sources */,
 				263BBC6A19F3236E006C04D9 /* VRAppDelegate.m in Sources */,
