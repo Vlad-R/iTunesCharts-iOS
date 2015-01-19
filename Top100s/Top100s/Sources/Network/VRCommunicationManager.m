@@ -15,6 +15,16 @@
 #import "VRRequest.h"
 #import "VRRequestManager.h"
 
+typedef NS_ENUM(NSInteger, VRFeedType) {
+    VRFeedTypeFreeBooks = 0,
+    VRFeedTypePaidBooks,
+    VRFeedTypeTextbooks,
+    VRFeedTypeFreeMobileApps,
+    VRFeedTypePaidMobileApps,
+    VRFeedTypeFreeMacApps,
+    VRFeedTypePaidMacApps
+};
+
 @interface VRCommunicationManager ()
 
 @property (nonatomic, strong) NSURLSession *session;
@@ -54,52 +64,31 @@
 #pragma mark - Public
 
 - (NSURLSessionTask *)freeBooksWithLimit:(NSUInteger)limit completion:(void (^)(VRBooks *, NSError *))block {
-    VRFreeBooksRequest *req = [[VRFreeBooksRequest alloc] init];
-    req.limit = [NSString stringWithFormat:@"%lu", limit];
-    
-    return [self dataTaskWithRequest:req completion:block];
+    return [self feedWithType:VRFeedTypeFreeBooks limit:limit completion:block];
 }
 
 - (NSURLSessionTask *)paidBooksWithLimit:(NSUInteger)limit completion:(void (^)(VRBooks *, NSError *))block {
-    VRPaidBooksRequest *req = [[VRPaidBooksRequest alloc] init];
-    req.limit = [NSString stringWithFormat:@"%lu", limit];
-    
-    return [self dataTaskWithRequest:req completion:block];
+    return [self feedWithType:VRFeedTypePaidBooks limit:limit completion:block];
 }
 
 - (NSURLSessionTask *)textbooksWithLimit:(NSUInteger)limit completion:(void (^)(VRBooks *, NSError *))block {
-    VRTextbooksRequest *req = [[VRTextbooksRequest alloc] init];
-    req.limit = [NSString stringWithFormat:@"%lu", limit];
-    
-    return [self dataTaskWithRequest:req completion:block];
+    return [self feedWithType:VRFeedTypeTextbooks limit:limit completion:block];
 }
 
 - (NSURLSessionTask *)freeMobileAppsWithLimit:(NSUInteger)limit completion:(void(^)(VRApps *, NSError *))block {
-    VRFreeMobileAppsRequest *req = [[VRFreeMobileAppsRequest alloc] init];
-    req.limit = [NSString stringWithFormat:@"%lu", limit];
-    
-    return [self dataTaskWithRequest:req completion:block];
+    return [self feedWithType:VRFeedTypeFreeMobileApps limit:limit completion:block];
 }
 
 - (NSURLSessionTask *)paidMobileAppsWithLimit:(NSUInteger)limit completion:(void (^)(VRApps *, NSError *))block {
-    VRPaidMobileAppsRequest *req = [[VRPaidMobileAppsRequest alloc] init];
-    req.limit = [NSString stringWithFormat:@"%lu", limit];
-    
-    return [self dataTaskWithRequest:req completion:block];
+    return [self feedWithType:VRFeedTypePaidMobileApps limit:limit completion:block];
 }
 
 - (NSURLSessionTask *)freeMacAppsWithLimit:(NSUInteger)limit completion:(void(^)(VRApps *, NSError *))block {
-    VRFreeMacAppsRequest *req = [[VRFreeMacAppsRequest alloc] init];
-    req.limit = [NSString stringWithFormat:@"%lu", limit];
-    
-    return [self dataTaskWithRequest:req completion:block];
+    return [self feedWithType:VRFeedTypeFreeMacApps limit:limit completion:block];
 }
 
 - (NSURLSessionTask *)paidMacAppsWithLimit:(NSUInteger)limit completion:(void (^)(VRApps *, NSError *))block {
-    VRPaidMacAppsRequest *req = [[VRPaidMacAppsRequest alloc] init];
-    req.limit = [NSString stringWithFormat:@"%lu", limit];
-    
-    return [self dataTaskWithRequest:req completion:block];
+    return [self feedWithType:VRFeedTypePaidMacApps limit:limit completion:block];
 }
 
 - (NSURLSessionDownloadTask *)downloadFileFromURL:(NSURL *)URL completion:(void(^)(NSString *tempPath, NSString *fileName, NSError *error))block {
@@ -119,6 +108,36 @@
 
 #pragma mark - Private
 
+- (NSURLSessionTask *)feedWithType:(VRFeedType)type limit:(NSUInteger)limit completion:(void (^)(id, NSError *))block {
+    Class requestClass = [self classForFeedType:type];
+    id req = [[requestClass alloc] init];
+    [req setLimit:[NSString stringWithFormat:@"%lu", limit]];
+    
+    return [self dataTaskWithRequest:req completion:block];
+}
+
+- (Class)classForFeedType:(VRFeedType)type {
+    switch (type) {
+        case VRFeedTypeFreeBooks:
+            return [VRFreeBooksRequest class];
+        case VRFeedTypePaidBooks:
+            return [VRPaidBooksRequest class];
+        case VRFeedTypeTextbooks:
+            return [VRTextbooksRequest class];
+        case VRFeedTypeFreeMobileApps:
+            return [VRFreeMobileAppsRequest class];
+        case VRFeedTypePaidMobileApps:
+            return [VRPaidMobileAppsRequest class];
+        case VRFeedTypeFreeMacApps:
+            return [VRFreeMacAppsRequest class];
+        case VRFeedTypePaidMacApps:
+            return [VRPaidMacAppsRequest class];
+            
+        default:
+            return nil;
+    }
+}
+
 - (NSURLSessionDataTask *)dataTaskWithRequest:(VRRequest *)request completion:(void(^)(id<VRModel> response, NSError *error))block {
 	if (!block) {
 		return nil;
@@ -128,7 +147,6 @@
 	NSURLSessionDataTask *task = [self.session dataTaskWithRequest:req
 												 completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
 													 if (error) {
-														 //TODO: Proper Error Handling
 														 block(nil, error);
 													 } else {
                                                          id<VRModel> model = [VRDataParser parseResponseData:data forRequest:request];
