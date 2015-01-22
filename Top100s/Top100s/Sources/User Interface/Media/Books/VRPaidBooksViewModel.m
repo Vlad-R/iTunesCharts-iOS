@@ -16,12 +16,16 @@
 
 - (void)fetchModel:(void (^)())completion {
     __weak typeof(self) weakSelf = self;
-    [[VRCommunicationManager sharedManager] paidBooksWithLimit:10 completion:^(VRBooks *books, NSError *error) {
+    [[VRCommunicationManager sharedManager] paidBooksWithLimit:10 sender:self completion:^(VRBooks *books, NSError *error) {
         weakSelf.model = books;
         if (completion) {
             completion();
         }
     }];
+}
+
+- (void)dealloc {
+    [[VRCommunicationManager sharedManager] cancelAllRequestsForSender:self];
 }
 
 @end

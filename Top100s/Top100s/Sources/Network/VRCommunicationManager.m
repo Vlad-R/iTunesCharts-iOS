@@ -8,12 +8,14 @@
 
 #import "VRCommunicationManager.h"
 
+#import "NSObject+UUID.h"
 #import "VRApps.h"
 #import "VRBooks.h"
 #import "VRDataParser.h"
 #import "VRNetworkActivityManager.h"
 #import "VRRequest.h"
 #import "VRRequestManager.h"
+#import "VRRequestPool.h"
 
 typedef NS_ENUM(NSInteger, VRFeedType) {
     VRFeedTypeFreeBooks = 0,
@@ -28,6 +30,7 @@ typedef NS_ENUM(NSInteger, VRFeedType) {
 @interface VRCommunicationManager ()
 
 @property (nonatomic, strong) NSURLSession *session;
+@property (nonatomic, strong) VRRequestPool *requestPool;
 @property (nonatomic, strong) NSOperationQueue *operationQueue;
 
 @end
@@ -44,6 +47,10 @@ typedef NS_ENUM(NSInteger, VRFeedType) {
 	return sharedInstance;
 }
 
+- (void)cancelAllRequestsForSender:(NSObject *)sender {
+    [self.requestPool cancelTasksWithIdentifier:sender.uniqueIdentifier];
+}
+
 - (instancetype)init {
 	self = [super init];
 	if (self) {
@@ -53,42 +60,44 @@ typedef NS_ENUM(NSInteger, VRFeedType) {
 		
 		NSURLSessionConfiguration *sessionConfig = [NSURLSessionConfiguration defaultSessionConfiguration];
         sessionConfig.timeoutIntervalForRequest = 60.0;
-        
 		self.session = [NSURLSession sessionWithConfiguration:sessionConfig
 													 delegate:nil
 												delegateQueue:self.operationQueue];
+        
+        self.requestPool = [[VRRequestPool alloc] init];
 	}
+    
 	return self;
 }
 
 #pragma mark - Public
 
-- (NSURLSessionTask *)freeBooksWithLimit:(NSUInteger)limit completion:(void (^)(VRBooks *, NSError *))block {
-    return [self feedWithType:VRFeedTypeFreeBooks limit:limit completion:block];
+- (void)freeBooksWithLimit:(NSUInteger)limit sender:(NSObject *)sender completion:(void (^)(VRBooks *, NSError *))block {
+    [self feedWithType:VRFeedTypeFreeBooks limit:limit requestSender:sender completion:block];
 }
 
-- (NSURLSessionTask *)paidBooksWithLimit:(NSUInteger)limit completion:(void (^)(VRBooks *, NSError *))block {
-    return [self feedWithType:VRFeedTypePaidBooks limit:limit completion:block];
+- (void)paidBooksWithLimit:(NSUInteger)limit sender:(NSObject *)sender completion:(void (^)(VRBooks *, NSError *))block {
+    [self feedWithType:VRFeedTypePaidBooks limit:limit requestSender:sender completion:block];
 }
 
-- (NSURLSessionTask *)textbooksWithLimit:(NSUInteger)limit completion:(void (^)(VRBooks *, NSError *))block {
-    return [self feedWithType:VRFeedTypeTextbooks limit:limit completion:block];
+- (void)textbooksWithLimit:(NSUInteger)limit sender:(NSObject *)sender completion:(void (^)(VRBooks *, NSError *))block {
+    [self feedWithType:VRFeedTypeTextbooks limit:limit requestSender:sender completion:block];
 }
 
-- (NSURLSessionTask *)freeMobileAppsWithLimit:(NSUInteger)limit completion:(void(^)(VRApps *, NSError *))block {
-    return [self feedWithType:VRFeedTypeFreeMobileApps limit:limit completion:block];
+- (void)freeMobileAppsWithLimit:(NSUInteger)limit sender:(NSObject *)sender completion:(void(^)(VRApps *, NSError *))block {
+    [self feedWithType:VRFeedTypeFreeMobileApps limit:limit requestSender:sender completion:block];
 }
 
-- (NSURLSessionTask *)paidMobileAppsWithLimit:(NSUInteger)limit completion:(void (^)(VRApps *, NSError *))block {
-    return [self feedWithType:VRFeedTypePaidMobileApps limit:limit completion:block];
+- (void)paidMobileAppsWithLimit:(NSUInteger)limit sender:(NSObject *)sender completion:(void (^)(VRApps *, NSError *))block {
+    [self feedWithType:VRFeedTypePaidMobileApps limit:limit requestSender:sender completion:block];
 }
 
-- (NSURLSessionTask *)freeMacAppsWithLimit:(NSUInteger)limit completion:(void(^)(VRApps *, NSError *))block {
-    return [self feedWithType:VRFeedTypeFreeMacApps limit:limit completion:block];
+- (void)freeMacAppsWithLimit:(NSUInteger)limit sender:(NSObject *)sender completion:(void(^)(VRApps *, NSError *))block {
+    [self feedWithType:VRFeedTypeFreeMacApps limit:limit requestSender:sender completion:block];
 }
 
-- (NSURLSessionTask *)paidMacAppsWithLimit:(NSUInteger)limit completion:(void (^)(VRApps *, NSError *))block {
-    return [self feedWithType:VRFeedTypePaidMacApps limit:limit completion:block];
+- (void)paidMacAppsWithLimit:(NSUInteger)limit sender:(NSObject *)sender completion:(void (^)(VRApps *, NSError *))block {
+    [self feedWithType:VRFeedTypePaidMacApps limit:limit requestSender:sender completion:block];
 }
 
 - (NSURLSessionDownloadTask *)downloadFileFromURL:(NSURL *)URL completion:(void(^)(NSString *tempPath, NSString *fileName, NSError *error))block {
@@ -101,6 +110,8 @@ typedef NS_ENUM(NSInteger, VRFeedType) {
                                                          block(location.path, NAME_FOR_URL(URL.absoluteString), error);
                                                      }];
     [[VRNetworkActivityManager sharedManager] observeURLSessionTask:task];
+    
+    //TODO: move this
     [task resume];
     
     return task;
@@ -108,12 +119,15 @@ typedef NS_ENUM(NSInteger, VRFeedType) {
 
 #pragma mark - Private
 
-- (NSURLSessionTask *)feedWithType:(VRFeedType)type limit:(NSUInteger)limit completion:(void (^)(id, NSError *))block {
+- (void)feedWithType:(VRFeedType)type limit:(NSUInteger)limit requestSender:(NSObject *)sender completion:(void (^)(id, NSError *))block {
     Class requestClass = [self classForFeedType:type];
     id req = [[requestClass alloc] init];
     [req setLimit:[NSString stringWithFormat:@"%lu", limit]];
     
-    return [self dataTaskWithRequest:req completion:block];
+    NSURLSessionTask *task = [self dataTaskWithRequest:req completion:block];
+    [self.requestPool enqueueTask:task withIdentifier:sender.uniqueIdentifier];
+    
+    [task resume];
 }
 
 - (Class)classForFeedType:(VRFeedType)type {
@@ -153,8 +167,8 @@ typedef NS_ENUM(NSInteger, VRFeedType) {
 														 block(model, error);
 													 }
 												 }];
+    //TODO: No singleton
     [[VRNetworkActivityManager sharedManager] observeURLSessionTask:task];
-	[task resume];
     
 	return task;
 }

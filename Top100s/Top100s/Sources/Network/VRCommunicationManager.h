@@ -15,13 +15,15 @@
 
 + (instancetype)sharedManager;
 
-- (NSURLSessionTask *)freeBooksWithLimit:(NSUInteger)limit completion:(void (^)(VRBooks *, NSError *))block;
-- (NSURLSessionTask *)paidBooksWithLimit:(NSUInteger)limit completion:(void (^)(VRBooks *, NSError *))block;
-- (NSURLSessionTask *)textbooksWithLimit:(NSUInteger)limit completion:(void (^)(VRBooks *, NSError *))block;
-- (NSURLSessionTask *)freeMobileAppsWithLimit:(NSUInteger)limit completion:(void(^)(VRApps *model, NSError *error))block;
-- (NSURLSessionTask *)paidMobileAppsWithLimit:(NSUInteger)limit completion:(void(^)(VRApps *model, NSError *error))block;
-- (NSURLSessionTask *)freeMacAppsWithLimit:(NSUInteger)limit completion:(void(^)(VRApps *, NSError *))block;
-- (NSURLSessionTask *)paidMacAppsWithLimit:(NSUInteger)limit completion:(void (^)(VRApps *, NSError *))block;
+- (void)cancelAllRequestsForSender:(NSObject *)sender;
+
+- (void)freeBooksWithLimit:(NSUInteger)limit sender:(NSObject *)sender completion:(void (^)(VRBooks *, NSError *))block;
+- (void)paidBooksWithLimit:(NSUInteger)limit sender:(NSObject *)sender completion:(void (^)(VRBooks *, NSError *))block;
+- (void)textbooksWithLimit:(NSUInteger)limit sender:(NSObject *)sender completion:(void (^)(VRBooks *, NSError *))block;
+- (void)freeMobileAppsWithLimit:(NSUInteger)limit sender:(NSObject *)sender completion:(void(^)(VRApps *model, NSError *error))block;
+- (void)paidMobileAppsWithLimit:(NSUInteger)limit sender:(NSObject *)sender completion:(void(^)(VRApps *model, NSError *error))block;
+- (void)freeMacAppsWithLimit:(NSUInteger)limit sender:(NSObject *)sender completion:(void(^)(VRApps *, NSError *))block;
+- (void)paidMacAppsWithLimit:(NSUInteger)limit sender:(NSObject *)sender completion:(void (^)(VRApps *, NSError *))block;
 
 - (NSURLSessionDownloadTask *)downloadFileFromURL:(NSURL *)URL completion:(void(^)(NSString *tempPath, NSString *fileName, NSError *error))block;
 

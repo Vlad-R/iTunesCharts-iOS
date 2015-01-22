@@ -16,12 +16,16 @@
 
 - (void)fetchModel:(void (^)())completion {
     __weak typeof(self) weakSelf = self;
-    [[VRCommunicationManager sharedManager] freeMobileAppsWithLimit:10 completion:^(VRApps *apps, NSError *error) {
+    [[VRCommunicationManager sharedManager] freeMobileAppsWithLimit:10 sender:self completion:^(VRApps *apps, NSError *error) {
         weakSelf.model = apps;
         if (completion) {
             completion();
         }
     }];
+}
+
+- (void)dealloc {
+    [[VRCommunicationManager sharedManager] cancelAllRequestsForSender:self];
 }
 
 @end
