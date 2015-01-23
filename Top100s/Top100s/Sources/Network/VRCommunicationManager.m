@@ -30,6 +30,7 @@ typedef NS_ENUM(NSInteger, VRFeedType) {
 @interface VRCommunicationManager ()
 
 @property (nonatomic, strong) NSURLSession *session;
+@property (nonatomic, strong) VRNetworkActivityManager *networkActivityManager;
 @property (nonatomic, strong) VRRequestPool *requestPool;
 @property (nonatomic, strong) NSOperationQueue *operationQueue;
 
@@ -47,10 +48,6 @@ typedef NS_ENUM(NSInteger, VRFeedType) {
 	return sharedInstance;
 }
 
-- (void)cancelAllRequestsForSender:(NSObject *)sender {
-    [self.requestPool cancelTasksWithIdentifier:sender.uniqueIdentifier];
-}
-
 - (instancetype)init {
 	self = [super init];
 	if (self) {
@@ -64,6 +61,8 @@ typedef NS_ENUM(NSInteger, VRFeedType) {
 													 delegate:nil
 												delegateQueue:self.operationQueue];
         
+        self.networkActivityManager = [[VRNetworkActivityManager alloc] init];
+        
         self.requestPool = [[VRRequestPool alloc] init];
 	}
     
@@ -71,6 +70,10 @@ typedef NS_ENUM(NSInteger, VRFeedType) {
 }
 
 #pragma mark - Public
+
+- (void)cancelAllRequestsForSender:(NSObject *)sender {
+    [self.requestPool cancelTasksWithIdentifier:sender.uniqueIdentifier];
+}
 
 - (void)freeBooksWithLimit:(NSUInteger)limit sender:(NSObject *)sender completion:(void (^)(VRBooks *, NSError *))block {
     [self feedWithType:VRFeedTypeFreeBooks limit:limit requestSender:sender completion:block];
@@ -109,9 +112,8 @@ typedef NS_ENUM(NSInteger, VRFeedType) {
                                                      completionHandler:^(NSURL *location, NSURLResponse *response, NSError *error) {
                                                          block(location.path, NAME_FOR_URL(URL.absoluteString), error);
                                                      }];
-    [[VRNetworkActivityManager sharedManager] observeURLSessionTask:task];
+    [self.networkActivityManager observeTask:task];
     
-    //TODO: move this
     [task resume];
     
     return task;
@@ -167,8 +169,8 @@ typedef NS_ENUM(NSInteger, VRFeedType) {
 														 block(model, error);
 													 }
 												 }];
-    //TODO: No singleton
-    [[VRNetworkActivityManager sharedManager] observeURLSessionTask:task];
+    
+    [self.networkActivityManager observeTask:task];
     
 	return task;
 }

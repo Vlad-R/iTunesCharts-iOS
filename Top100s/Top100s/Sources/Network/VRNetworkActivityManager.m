@@ -16,16 +16,6 @@
 
 @implementation VRNetworkActivityManager
 
-+ (VRNetworkActivityManager *)sharedManager {
-    static VRNetworkActivityManager *sharedInstance = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        sharedInstance = [[self alloc] init];
-    });
-    
-    return sharedInstance;
-}
-
 - (instancetype)init {
     self = [super init];
     if (self) {
@@ -49,7 +39,7 @@
 
 #pragma mark - Public
 
-- (void)observeURLSessionTask:(NSURLSessionTask *)task {
+- (void)observeTask:(NSURLSessionTask *)task {
     [task addObserver:self
            forKeyPath:PROPERTY(state)
               options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld
@@ -90,7 +80,9 @@
         }
         
     } else if ([keyPath isEqualToString:PROPERTY(runningTaskCount)]) {
-        [UIApplication sharedApplication].networkActivityIndicatorVisible = self.networkActive;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [UIApplication sharedApplication].networkActivityIndicatorVisible = self.networkActive;
+        });
         
     } else {
         [super observeValueForKeyPath:keyPath

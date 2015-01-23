@@ -12,8 +12,6 @@
 
 @property (nonatomic, readonly, getter=isNetworkActive) BOOL networkActive;
 
-+ (VRNetworkActivityManager *)sharedManager;
-
-- (void)observeURLSessionTask:(NSURLSessionTask *)task;
+- (void)observeTask:(NSURLSessionTask *)task;
 
 @end
