@@ -124,7 +124,7 @@ typedef NS_ENUM(NSInteger, VRFeedType) {
 - (void)feedWithType:(VRFeedType)type limit:(NSUInteger)limit requestSender:(NSObject *)sender completion:(void (^)(id, NSError *))block {
     Class requestClass = [self classForFeedType:type];
     id req = [[requestClass alloc] init];
-    [req setLimit:[NSString stringWithFormat:@"%lu", limit]];
+    [req setLimit:[NSString stringWithFormat:@"%lu", (unsigned long)limit]];
     
     NSURLSessionTask *task = [self dataTaskWithRequest:req completion:block];
     [self.requestPool enqueueTask:task withIdentifier:sender.uniqueIdentifier];

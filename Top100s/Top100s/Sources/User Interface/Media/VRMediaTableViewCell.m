@@ -31,7 +31,7 @@
     if (_orderNumber != orderNumber) {
         _orderNumber = orderNumber;
         
-        self.orderNumberLabel.text = [NSString stringWithFormat:@"%lu", _orderNumber];
+        self.orderNumberLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)_orderNumber];
     }
 }
 
