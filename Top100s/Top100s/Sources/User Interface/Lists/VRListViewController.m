@@ -16,8 +16,10 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"pushList"] && sender && [segue.destinationViewController respondsToSelector:@selector(setViewModel:)]) {
-        NSString *nextViewModel = sender;
+        NSString *nextViewModelKey = sender;
+        NSString *nextViewModel = self.viewModel.viewModelMap[nextViewModelKey];
         id viewModel = [[NSClassFromString(nextViewModel) alloc] init];
+        [segue.destinationViewController setTitle:nextViewModelKey];
         [segue.destinationViewController setViewModel:viewModel];
     }
 }
@@ -33,8 +35,8 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellIdent];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kCellIdent];
-        cell.textLabel.text = self.viewModel.list[indexPath.row];
     }
+    cell.textLabel.text = self.viewModel.list[indexPath.row];
     
     return cell;
 }
@@ -44,11 +46,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    NSString *key = self.viewModel.list[indexPath.row];
-    NSString *nextViewModel = self.viewModel.viewModelMap[key];
-    if (nextViewModel) {
-        [self performSegueWithIdentifier:@"pushList" sender:nextViewModel];
-    }
+    NSString *nextViewModelKey = self.viewModel.list[indexPath.row];
+    [self performSegueWithIdentifier:@"pushList" sender:nextViewModelKey];
 }
 
 @end
