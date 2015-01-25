@@ -39,10 +39,11 @@
     if (_model != model) {
         _model = model;
         
+        [self.iconImageView cancelRequests];
+        [self.iconImageView loadImageFromURL:[(VRIcon *)_model.icons[2] URL]];
         self.nameLabel.text = _model.name;
         self.categoryLabel.text = _model.category;
         self.priceLabel.text = _model.price;
-        [self.iconImageView loadImageFromURL:[(VRIcon *)_model.icons[2] URL]];
     }
 }
 

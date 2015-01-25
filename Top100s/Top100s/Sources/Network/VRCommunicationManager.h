@@ -25,6 +25,6 @@
 - (void)freeMacAppsWithLimit:(NSUInteger)limit sender:(NSObject *)sender completion:(void(^)(VRApps *, NSError *))block;
 - (void)paidMacAppsWithLimit:(NSUInteger)limit sender:(NSObject *)sender completion:(void (^)(VRApps *, NSError *))block;
 
-- (NSURLSessionDownloadTask *)downloadFileFromURL:(NSURL *)URL completion:(void(^)(NSString *tempPath, NSString *fileName, NSError *error))block;
+- (void)downloadFileFromURL:(NSURL *)URL sender:(NSObject *)sender completion:(void(^)(NSString *tempPath, NSError *error))block;
 
 @end

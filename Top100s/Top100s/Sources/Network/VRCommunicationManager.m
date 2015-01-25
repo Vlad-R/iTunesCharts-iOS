@@ -103,20 +103,19 @@ typedef NS_ENUM(NSInteger, VRFeedType) {
     [self feedWithType:VRFeedTypePaidMacApps limit:limit requestSender:sender completion:block];
 }
 
-- (NSURLSessionDownloadTask *)downloadFileFromURL:(NSURL *)URL completion:(void(^)(NSString *tempPath, NSString *fileName, NSError *error))block {
+- (void)downloadFileFromURL:(NSURL *)URL sender:(NSObject *)sender completion:(void(^)(NSString *tempPath, NSError *error))block {
     if (!block) {
-        return nil;
+        return;
     }
     
     NSURLSessionDownloadTask *task = [self.session downloadTaskWithURL:URL
                                                      completionHandler:^(NSURL *location, NSURLResponse *response, NSError *error) {
-                                                         block(location.path, NAME_FOR_URL(URL.absoluteString), error);
+                                                         block(location.path, error);
                                                      }];
     [self.networkActivityManager observeTask:task];
+    [self.requestPool enqueueTask:task withIdentifier:sender.uniqueIdentifier];
     
     [task resume];
-    
-    return task;
 }
 
 #pragma mark - Private

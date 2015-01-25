@@ -23,7 +23,8 @@
     } else {
         self.activityViewVisible = YES;
         [[VRCommunicationManager sharedManager] downloadFileFromURL:[NSURL URLWithString:URL]
-                                                         completion:^(NSString *tempPath, NSString *fileName, NSError *error) {
+                                                             sender:self
+                                                         completion:^(NSString *tempPath, NSError *error) {
                                                              [[VRCacheManager sharedManager] moveImageToCacheFromPath:tempPath withName:imageName];
                                                              dispatch_async(dispatch_get_main_queue(), ^{
                                                                  self.image = [[VRCacheManager sharedManager] cachedImageWithName:imageName];
@@ -31,6 +32,14 @@
                                                              });
                                                          }];
     }
+}
+
+- (void)cancelRequests {
+    [[VRCommunicationManager sharedManager] cancelAllRequestsForSender:self];
+}
+
+- (void)dealloc {
+    [self cancelRequests];
 }
 
 @end

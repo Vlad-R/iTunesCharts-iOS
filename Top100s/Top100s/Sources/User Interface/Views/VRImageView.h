@@ -11,5 +11,6 @@
 @interface VRImageView : UIImageView
 
 - (void)loadImageFromURL:(NSString *)URL;
+- (void)cancelRequests;
 
 @end

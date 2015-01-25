@@ -34,7 +34,7 @@
 #pragma mark - Accessors
 
 - (BOOL)isNetworkActive {
-    return self.runningTaskCount;
+    return self.runningTaskCount > 0;
 }
 
 #pragma mark - Public
