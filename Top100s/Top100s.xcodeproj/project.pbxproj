@@ -413,11 +413,11 @@
 		26B704D61A12A84B00DB2DB2 /* Media */ = {
 			isa = PBXGroup;
 			children = (
+				26B704DA1A12C40F00DB2DB2 /* VRMediaViewModel.h */,
 				26B704D71A12A8E500DB2DB2 /* VRMediaViewController.h */,
 				26B704D81A12A8E500DB2DB2 /* VRMediaViewController.m */,
 				26B704DD1A12C44900DB2DB2 /* VRMediaTableViewCell.h */,
 				26B704DE1A12C44900DB2DB2 /* VRMediaTableViewCell.m */,
-				26B704DA1A12C40F00DB2DB2 /* VRMediaViewModel.h */,
 				2639EFEC1A687E2C00DF9FA3 /* Apps */,
 				261E8CE51A215D2500A6D14E /* Books */,
 			);

@@ -67,7 +67,6 @@ static NSString *kMediaCellID = @"media_cell_id";
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     VREntryAdapter *adapter = [VREntryAdapter adapterFromObject:[self.viewModel.model entries][indexPath.row]];
-    
     [self performSegueWithIdentifier:@"showDetails" sender:adapter];
 }
 
