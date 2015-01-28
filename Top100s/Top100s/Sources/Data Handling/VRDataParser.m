@@ -61,7 +61,7 @@
 		id value = [obj copy];
 		
 		NSString *property = responseMap[key];
-		NSArray *jsonKeysToObject = JSON_KEYS(key);
+		NSArray *jsonKeysToObject = json_keys(key);
 		for (NSString *iter in jsonKeysToObject) {
 			value = value[iter];
 		}

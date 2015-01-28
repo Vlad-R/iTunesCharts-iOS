@@ -20,7 +20,7 @@ typedef NS_ENUM(NSInteger, VRRequestType) {
 //Override in subclasses
 - (VRRequestType)type;
 - (NSString *)endpoint;
-- (NSDictionary *)parameterMap;
-- (Class<VRModel>)responseModelClass;
+- (NSDictionary *)parameterMap; //return a dictionary containing json keys/property name pairs
+- (Class<VRModel>)responseModelClass; //return the class for the response object
 
 @end

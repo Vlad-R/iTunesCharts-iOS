@@ -17,7 +17,7 @@
 #define PROPERTY(property) NSStringFromSelector(@selector(property))
 #define CLASS(c) NSStringFromClass([c class])
 
-#define pmap(keys, property) JSON_KEYPATH(keys):PROPERTY(property)
+#define pmap(keys, property) json_keypath(keys):PROPERTY(property)
 #define transform(property, cls) PROPERTY(property):CLASS(cls)
 
 #define ClassMap(key, cls) key: CLASS(cls)

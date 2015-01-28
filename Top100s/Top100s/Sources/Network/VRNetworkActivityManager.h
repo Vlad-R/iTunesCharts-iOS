@@ -8,10 +8,18 @@
 
 @import Foundation;
 
+/**
+ Observes the network activity within the app and displays the Network Activity Indicator whenever necessary.
+ */
 @interface VRNetworkActivityManager : NSObject
 
 @property (nonatomic, readonly, getter=isNetworkActive) BOOL networkActive;
 
+/**
+ Observes the states of NSURLSessionTask objects.
+ 
+ @param task A NSURLSessionTask that needs to be observed.
+ */
 - (void)observeTask:(NSURLSessionTask *)task;
 
 @end

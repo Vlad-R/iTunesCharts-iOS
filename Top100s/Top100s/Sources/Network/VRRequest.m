@@ -13,7 +13,7 @@
 #pragma mark - Public
 
 - (NSString *)host {
-    return [NSString stringWithFormat:@"https://itunes.apple.com/%@/rss", [self countryCode]];
+    return [NSString stringWithFormat:@"https://itunes.apple.com/%@/rss", [[NSLocale currentLocale] objectForKey:NSLocaleCountryCode]];
 }
 
 - (VRRequestType)type {
@@ -33,12 +33,6 @@
 - (Class<VRModel>)responseModelClass {
 	ASSERT_MISSING_OVERRIDE_IMPLEMENTATION;
 	return NULL;
-}
-
-#pragma mark - Private
-
-- (NSString *)countryCode {
-	return [[NSLocale currentLocale] objectForKey:NSLocaleCountryCode];
 }
 
 @end

@@ -12,7 +12,7 @@
 
 @import Foundation;
 
-static inline NSString *JSON_KEYPATH(NSArray *keys) {
+static inline NSString *json_keypath(NSArray *keys) {
 	NSMutableString *result = [NSMutableString string];
 	[keys enumerateObjectsUsingBlock:^(NSString *obj, NSUInteger idx, BOOL *stop) {
 		if (idx > 0) {
@@ -25,11 +25,11 @@ static inline NSString *JSON_KEYPATH(NSArray *keys) {
 	return [NSString stringWithString:result];
 }
 
-static inline NSArray *JSON_KEYS(NSString *string) {
+static inline NSArray *json_keys(NSString *string) {
 	return [string componentsSeparatedByString:@"->"];
 }
 
-static inline NSString *NAME_FOR_URL(NSString *URL) {
+static inline NSString *name_for_URL(NSString *URL) {
     NSString *result = [URL stringByReplacingOccurrencesOfString:@"/" withString:@""];
     result = [result stringByReplacingOccurrencesOfString:@":" withString:@""];
     result = [result stringByReplacingOccurrencesOfString:@"." withString:@""];

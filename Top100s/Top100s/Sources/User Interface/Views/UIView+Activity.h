@@ -10,6 +10,10 @@
 
 @interface UIView (Activity)
 
+/**
+ Shows an overlay and a spinner on self when set on YES.
+ The user can't interact with self while the overlay is present.
+ */
 @property (nonatomic, assign) BOOL activityViewVisible;
 
 @end
