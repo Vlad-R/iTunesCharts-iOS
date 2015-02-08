@@ -64,7 +64,9 @@ static NSString *kMediaCellID = @"media_cell_id";
 #pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (self.navigationController.splitViewController.collapsed) {
+        [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    }
     
     VREntryAdapter *adapter = [VREntryAdapter adapterFromObject:[self.viewModel.model entries][indexPath.row]];
     [self performSegueWithIdentifier:@"showDetails" sender:adapter];

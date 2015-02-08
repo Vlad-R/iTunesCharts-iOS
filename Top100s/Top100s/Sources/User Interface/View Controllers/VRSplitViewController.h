@@ -8,6 +8,6 @@
 
 @import UIKit;
 
-@interface VRSplitViewController : UISplitViewController
+@interface VRSplitViewController : UISplitViewController <UISplitViewControllerDelegate>
 
 @end
