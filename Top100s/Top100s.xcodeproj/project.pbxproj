@@ -295,7 +295,7 @@
 		263BBC2719F31F3D006C04D9 = {
 			isa = PBXGroup;
 			children = (
-				263BBC5919F3236E006C04D9 /* Top100s */,
+				263BBC5919F3236E006C04D9 /* Main App */,
 				263BBC3119F31F3D006C04D9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -308,13 +308,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		263BBC5919F3236E006C04D9 /* Top100s */ = {
+		263BBC5919F3236E006C04D9 /* Main App */ = {
 			isa = PBXGroup;
 			children = (
 				263BBC5F19F3236E006C04D9 /* Sources */,
 				263BBC5A19F3236E006C04D9 /* Resources */,
 			);
-			path = Top100s;
+			path = "Main App";
 			sourceTree = "<group>";
 		};
 		263BBC5A19F3236E006C04D9 /* Resources */ = {
@@ -596,7 +596,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/Top100s/Sources/Application/prefix.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Main App/Sources/Application/prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -640,7 +640,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/Top100s/Sources/Application/prefix.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Main App/Sources/Application/prefix.pch";
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -662,7 +662,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/Top100s/Resources/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Main App/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -674,7 +674,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/Top100s/Resources/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Main App/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

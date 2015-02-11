@@ -44,7 +44,12 @@
 #pragma mark - Actions
 
 - (IBAction)buyButtonTapped:(id)sender {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:self.model.link]];
+    NSURL *itemURL = [NSURL URLWithString:self.model.link];
+    if ([[UIApplication sharedApplication] canOpenURL:itemURL]) {
+        [[UIApplication sharedApplication] openURL:itemURL];
+    } else {
+        //TODO: Alert
+    }
 }
 
 @end
