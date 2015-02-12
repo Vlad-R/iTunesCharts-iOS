@@ -34,6 +34,10 @@
 		2665F6201A6AB55A00FD7AA5 /* VRPaidBooksViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2665F61F1A6AB55A00FD7AA5 /* VRPaidBooksViewModel.m */; };
 		2665F6231A6AB5F100FD7AA5 /* VRTextbooksViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2665F6221A6AB5F100FD7AA5 /* VRTextbooksViewModel.m */; };
 		267920A71A154249003C28A8 /* VRCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 267920A61A154249003C28A8 /* VRCacheManager.m */; };
+		267B6D851A8C0E6F008B9193 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 267B6D841A8C0E6F008B9193 /* NotificationCenter.framework */; };
+		267B6D901A8C0E6F008B9193 /* Top100sTodayExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 267B6D821A8C0E6F008B9193 /* Top100sTodayExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		267B6DA81A8C140E008B9193 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 267B6DA31A8C140E008B9193 /* MainInterface.storyboard */; };
+		267B6DA91A8C140E008B9193 /* VRTodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 267B6DA61A8C140E008B9193 /* VRTodayViewController.m */; };
 		268064BD1A63330C00863984 /* VRAppEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 268064BC1A63330C00863984 /* VRAppEntry.m */; };
 		268064C01A63375000863984 /* VRBookEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 268064BF1A63375000863984 /* VRBookEntry.m */; };
 		268064C51A633C3B00863984 /* VRIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 268064C21A633C3B00863984 /* VRIcon.m */; };
@@ -55,6 +59,30 @@
 		26F6FE331A65D50B00DE0979 /* VRAppEntryAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 26F6FE321A65D50B00DE0979 /* VRAppEntryAdapter.m */; };
 		26F6FE361A65D52500DE0979 /* VRBookEntryAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 26F6FE351A65D52500DE0979 /* VRBookEntryAdapter.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		267B6D8E1A8C0E6F008B9193 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 263BBC2819F31F3D006C04D9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 267B6D811A8C0E6F008B9193;
+			remoteInfo = Top100sTodayExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		267B6D941A8C0E6F008B9193 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				267B6D901A8C0E6F008B9193 /* Top100sTodayExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		180648061A010AA400C1AE59 /* VRList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRList.h; sourceTree = "<group>"; };
@@ -113,6 +141,12 @@
 		2665F6221A6AB5F100FD7AA5 /* VRTextbooksViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRTextbooksViewModel.m; sourceTree = "<group>"; };
 		267920A51A154249003C28A8 /* VRCacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRCacheManager.h; sourceTree = "<group>"; };
 		267920A61A154249003C28A8 /* VRCacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRCacheManager.m; sourceTree = "<group>"; };
+		267B6D821A8C0E6F008B9193 /* Top100sTodayExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Top100sTodayExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		267B6D841A8C0E6F008B9193 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		267B6DA21A8C140E008B9193 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		267B6DA31A8C140E008B9193 /* MainInterface.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
+		267B6DA51A8C140E008B9193 /* VRTodayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRTodayViewController.h; sourceTree = "<group>"; };
+		267B6DA61A8C140E008B9193 /* VRTodayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRTodayViewController.m; sourceTree = "<group>"; };
 		268064BB1A63330C00863984 /* VRAppEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRAppEntry.h; sourceTree = "<group>"; };
 		268064BC1A63330C00863984 /* VRAppEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRAppEntry.m; sourceTree = "<group>"; };
 		268064BE1A63375000863984 /* VRBookEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRBookEntry.h; sourceTree = "<group>"; };
@@ -160,6 +194,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		267B6D7F1A8C0E6F008B9193 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				267B6D851A8C0E6F008B9193 /* NotificationCenter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +338,8 @@
 			isa = PBXGroup;
 			children = (
 				263BBC5919F3236E006C04D9 /* Main App */,
+				267B6D951A8C0FB8008B9193 /* Today Extension */,
+				267B6D831A8C0E6F008B9193 /* Frameworks */,
 				263BBC3119F31F3D006C04D9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -304,6 +348,7 @@
 			isa = PBXGroup;
 			children = (
 				263BBC3019F31F3D006C04D9 /* Top100s.app */,
+				267B6D821A8C0E6F008B9193 /* Top100sTodayExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -372,6 +417,41 @@
 				269A90661A12D05F000CA132 /* View Controllers */,
 			);
 			path = "User Interface";
+			sourceTree = "<group>";
+		};
+		267B6D831A8C0E6F008B9193 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				267B6D841A8C0E6F008B9193 /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		267B6D951A8C0FB8008B9193 /* Today Extension */ = {
+			isa = PBXGroup;
+			children = (
+				267B6DA41A8C140E008B9193 /* Sources */,
+				267B6DA11A8C140E008B9193 /* Resources */,
+			);
+			path = "Today Extension";
+			sourceTree = "<group>";
+		};
+		267B6DA11A8C140E008B9193 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				267B6DA21A8C140E008B9193 /* Info.plist */,
+				267B6DA31A8C140E008B9193 /* MainInterface.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		267B6DA41A8C140E008B9193 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				267B6DA51A8C140E008B9193 /* VRTodayViewController.h */,
+				267B6DA61A8C140E008B9193 /* VRTodayViewController.m */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		268064BA1A6332C600863984 /* Entries */ = {
@@ -462,15 +542,34 @@
 				263BBC2C19F31F3D006C04D9 /* Sources */,
 				263BBC2D19F31F3D006C04D9 /* Frameworks */,
 				263BBC2E19F31F3D006C04D9 /* Resources */,
+				267B6D941A8C0E6F008B9193 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				267B6D8F1A8C0E6F008B9193 /* PBXTargetDependency */,
 			);
 			name = Top100s;
 			productName = Top100s;
 			productReference = 263BBC3019F31F3D006C04D9 /* Top100s.app */;
 			productType = "com.apple.product-type.application";
+		};
+		267B6D811A8C0E6F008B9193 /* Top100sTodayExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 267B6D911A8C0E6F008B9193 /* Build configuration list for PBXNativeTarget "Top100sTodayExtension" */;
+			buildPhases = (
+				267B6D7E1A8C0E6F008B9193 /* Sources */,
+				267B6D7F1A8C0E6F008B9193 /* Frameworks */,
+				267B6D801A8C0E6F008B9193 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Top100sTodayExtension;
+			productName = Top100sTodayExtension;
+			productReference = 267B6D821A8C0E6F008B9193 /* Top100sTodayExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -483,6 +582,9 @@
 				TargetAttributes = {
 					263BBC2F19F31F3D006C04D9 = {
 						CreatedOnToolsVersion = 6.0.1;
+					};
+					267B6D811A8C0E6F008B9193 = {
+						CreatedOnToolsVersion = 6.1.1;
 					};
 				};
 			};
@@ -500,6 +602,7 @@
 			projectRoot = "";
 			targets = (
 				263BBC2F19F31F3D006C04D9 /* Top100s */,
+				267B6D811A8C0E6F008B9193 /* Top100sTodayExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -513,6 +616,14 @@
 				263BBC6B19F3236E006C04D9 /* LaunchScreen.xib in Resources */,
 				263BBC6819F3236E006C04D9 /* Main.storyboard in Resources */,
 				263BBC6619F3236E006C04D9 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		267B6D801A8C0E6F008B9193 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				267B6DA81A8C140E008B9193 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -569,7 +680,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		267B6D7E1A8C0E6F008B9193 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				267B6DA91A8C140E008B9193 /* VRTodayViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		267B6D8F1A8C0E6F008B9193 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 267B6D811A8C0E6F008B9193 /* Top100sTodayExtension */;
+			targetProxy = 267B6D8E1A8C0E6F008B9193 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		263BBC5119F31F3D006C04D9 /* Debug */ = {
@@ -681,6 +808,32 @@
 			};
 			name = Release;
 		};
+		267B6D921A8C0E6F008B9193 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/Today Extension/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		267B6D931A8C0E6F008B9193 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "$(SRCROOT)/Today Extension/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -698,6 +851,15 @@
 			buildConfigurations = (
 				263BBC5419F31F3D006C04D9 /* Debug */,
 				263BBC5519F31F3D006C04D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		267B6D911A8C0E6F008B9193 /* Build configuration list for PBXNativeTarget "Top100sTodayExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				267B6D921A8C0E6F008B9193 /* Debug */,
+				267B6D931A8C0E6F008B9193 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
