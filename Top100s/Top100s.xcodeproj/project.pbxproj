@@ -47,6 +47,7 @@
 		2691C4AB1A0FA7C800763E57 /* VRListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2691C4AA1A0FA7C800763E57 /* VRListViewController.m */; };
 		2691C4AE1A0FA80C00763E57 /* VRListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2691C4AD1A0FA80C00763E57 /* VRListViewModel.m */; };
 		2691C4B11A0FAC6E00763E57 /* VRMediaTypeListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2691C4B01A0FAC6E00763E57 /* VRMediaTypeListViewModel.m */; };
+		26B4D5001A8D5F1D007D136D /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 26B4D4FF1A8D5F1D007D136D /* Settings.bundle */; };
 		26B704D91A12A8E500DB2DB2 /* VRMediaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26B704D81A12A8E500DB2DB2 /* VRMediaViewController.m */; };
 		26B704DF1A12C44900DB2DB2 /* VRMediaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26B704DE1A12C44900DB2DB2 /* VRMediaTableViewCell.m */; };
 		26C243721A05950C001CEFD1 /* SampleResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 26C243711A05950C001CEFD1 /* SampleResponse.json */; };
@@ -165,6 +166,7 @@
 		2691C4AD1A0FA80C00763E57 /* VRListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRListViewModel.m; sourceTree = "<group>"; };
 		2691C4AF1A0FAC6E00763E57 /* VRMediaTypeListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRMediaTypeListViewModel.h; sourceTree = "<group>"; };
 		2691C4B01A0FAC6E00763E57 /* VRMediaTypeListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRMediaTypeListViewModel.m; sourceTree = "<group>"; };
+		26B4D4FF1A8D5F1D007D136D /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		26B704D71A12A8E500DB2DB2 /* VRMediaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRMediaViewController.h; sourceTree = "<group>"; };
 		26B704D81A12A8E500DB2DB2 /* VRMediaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VRMediaViewController.m; sourceTree = "<group>"; };
 		26B704DA1A12C40F00DB2DB2 /* VRMediaViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VRMediaViewModel.h; sourceTree = "<group>"; };
@@ -365,10 +367,11 @@
 		263BBC5A19F3236E006C04D9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				263BBC5C19F3236E006C04D9 /* Info.plist */,
 				263BBC5D19F3236E006C04D9 /* Storyboards */,
 				263BBC5B19F3236E006C04D9 /* Images.xcassets */,
+				26B4D4FF1A8D5F1D007D136D /* Settings.bundle */,
 				26C243701A0594D5001CEFD1 /* Other */,
-				263BBC5C19F3236E006C04D9 /* Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -614,6 +617,7 @@
 			files = (
 				26C243721A05950C001CEFD1 /* SampleResponse.json in Resources */,
 				263BBC6B19F3236E006C04D9 /* LaunchScreen.xib in Resources */,
+				26B4D5001A8D5F1D007D136D /* Settings.bundle in Resources */,
 				263BBC6819F3236E006C04D9 /* Main.storyboard in Resources */,
 				263BBC6619F3236E006C04D9 /* Images.xcassets in Resources */,
 			);
