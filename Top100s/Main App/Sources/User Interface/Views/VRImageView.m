@@ -15,6 +15,9 @@
 @implementation VRImageView
 
 - (void)loadImageFromURL:(NSString *)URL {
+    self.activityViewVisible = NO;
+    self.image = nil;
+    
     NSString *imageName = name_for_URL(URL);
     UIImage *cachedImage = [[VRCacheManager sharedManager] cachedImageWithName:imageName];
     if (cachedImage) {
@@ -35,6 +38,7 @@
 }
 
 - (void)cancelRequest {
+    self.activityViewVisible = NO;
     [[VRCommunicationManager sharedManager] cancelAllRequestsForSender:self];
 }
 
