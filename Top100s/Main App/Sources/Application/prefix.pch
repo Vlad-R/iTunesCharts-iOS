@@ -17,6 +17,7 @@
 #include "VRMacros.h"
 
 #import "UIColor+Additions.h"
+#import "VRUserDefaults.h"
 
 
 #endif

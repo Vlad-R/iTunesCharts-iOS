@@ -1,0 +1,17 @@
+//
+//  VRUserDefaults.m
+//  Top100s
+//
+//  Created by Vlad-R on 14/02/15.
+//  Copyright (c) 2015 Vlad-R. All rights reserved.
+//
+
+#import "VRUserDefaults.h"
+
+@implementation VRUserDefaults
+
++ (NSUInteger)settingsBundleNumberOfItemsToRequest {
+    return [[[NSUserDefaults standardUserDefaults] stringForKey:@"number_of_items_to_request"] integerValue];
+}
+
+@end
