@@ -11,7 +11,8 @@
 @implementation VRUserDefaults
 
 + (NSUInteger)settingsBundleNumberOfItemsToRequest {
-    return [[[NSUserDefaults standardUserDefaults] stringForKey:@"number_of_items_to_request"] integerValue];
+    NSString *count = [[NSUserDefaults standardUserDefaults] stringForKey:@"number_of_items_to_request"];
+    return count ? count.integerValue : 10;
 }
 
 @end
