@@ -1,4 +1,4 @@
-iTunesTop100
-============
+iTunes Charts
+=============
 
-Retrieves and displays the lists with the top downloaded items a user can get from iTunes.
+Retrieves and displays the lists of top downloaded items from iTunes.
