@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 Vlad-R. All rights reserved.
 //
 
-#ifndef Top100s_prefix_pch
-#define Top100s_prefix_pch
+#ifndef iTunesCharts_prefix_pch
+#define iTunesCharts_prefix_pch
 
 
 #ifdef __OBJC__
